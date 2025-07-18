@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://nx4ggy1h8ovm"]
+[gd_scene load_steps=6 format=3 uid="uid://djvanbdp8c7no"]
 
-[ext_resource type="Script" path="res://players/player1/player1.gd" id="1_b3iya"]
+[ext_resource type="Script" path="res://players/player1/player2.gd" id="1_q82fh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bsqsj"]
 size = Vector2(50, 50)
@@ -15,7 +15,7 @@ colors = PackedColorArray(1, 0, 0, 1, 0.815686, 0, 0, 1)
 gradient = SubResource("Gradient_27nrb")
 
 [node name="player1" type="CharacterBody2D"]
-script = ExtResource("1_b3iya")
+script = ExtResource("1_q82fh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_bsqsj")
