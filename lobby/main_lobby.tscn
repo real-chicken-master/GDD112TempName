@@ -10,14 +10,15 @@
 [node name="Minigame Start" type="Node2D" parent="."]
 
 [node name="Minigame 1" parent="Minigame Start" instance=ExtResource("1_x04k7")]
-position = Vector2(236, 237)
+position = Vector2(250, 250)
 
 [node name="Minigame 2" parent="Minigame Start" instance=ExtResource("2_d72ml")]
-position = Vector2(585, 73)
+position = Vector2(575, 75)
 
 [node name="Minigame 3" parent="Minigame Start" instance=ExtResource("3_ufeh7")]
-position = Vector2(921, 232)
+position = Vector2(900, 250)
 
 [node name="players" type="Node2D" parent="."]
 
 [node name="player1" parent="." instance=ExtResource("4_y57fi")]
+position = Vector2(575, 500)
