@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwqor80lqgqvq"]
+
+[ext_resource type="Script" path="res://lobby/minigame_3.gd" id="1_frd4a"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dgx6a"]
+radius = 55.0364
+
+[node name="Minigame 3" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_frd4a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_dgx6a")

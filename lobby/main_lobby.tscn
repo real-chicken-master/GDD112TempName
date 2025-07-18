@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxtgtd1cq23fw"]
+
+[ext_resource type="PackedScene" uid="uid://c6mx5yrnxiiqu" path="res://lobby/minigame_1.tscn" id="1_x04k7"]
+[ext_resource type="PackedScene" uid="uid://bvxji66hx528i" path="res://lobby/minigame_2.tscn" id="2_d72ml"]
+[ext_resource type="PackedScene" uid="uid://bwqor80lqgqvq" path="res://lobby/minigame_3.tscn" id="3_ufeh7"]
+
+[node name="Main Lobby" type="Node2D"]
+
+[node name="Minigame Start" type="Node2D" parent="."]
+
+[node name="Minigame 1" parent="Minigame Start" instance=ExtResource("1_x04k7")]
+position = Vector2(236, 237)
+
+[node name="Minigame 2" parent="Minigame Start" instance=ExtResource("2_d72ml")]
+position = Vector2(604, 73)
+
+[node name="Minigame 3" parent="Minigame Start" instance=ExtResource("3_ufeh7")]
+position = Vector2(921, 232)
