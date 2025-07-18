@@ -2,11 +2,7 @@ extends Area2D
 
 
 
-func _ready():
+func _process(delta):
 	for body in get_overlapping_bodies():
 		if (body.name == "player1" || "player2"):
-			pass
-			
-
-
-
+			get_tree().change_scene_to_file("res://Minigames/road_brawl.tscn")

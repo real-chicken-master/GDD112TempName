@@ -20,5 +20,5 @@ position = Vector2(900, 250)
 
 [node name="players" type="Node2D" parent="."]
 
-[node name="player1" parent="." instance=ExtResource("4_y57fi")]
+[node name="player1" parent="players" instance=ExtResource("4_y57fi")]
 position = Vector2(575, 500)
