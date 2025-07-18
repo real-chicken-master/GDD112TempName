@@ -14,7 +14,8 @@ colors = PackedColorArray(1, 0, 0, 1, 0.815686, 0, 0, 1)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_uob3u"]
 gradient = SubResource("Gradient_27nrb")
 
-[node name="player1" type="CharacterBody2D"]
+[node name="player1" type="CharacterBody2D" groups=["player1"]]
+z_index = 1
 script = ExtResource("1_b3iya")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -24,4 +25,5 @@ shape = SubResource("RectangleShape2D_bsqsj")
 mesh = SubResource("QuadMesh_rc8nc")
 texture = SubResource("GradientTexture1D_uob3u")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
+remote_path = NodePath("../CollisionShape2D")

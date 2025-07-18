@@ -1,0 +1,59 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2wh2ounbed2o"]
+
+[ext_resource type="Script" path="res://UI/SubViewportP1.gd" id="1_2dxrn"]
+[ext_resource type="Script" path="res://UI/SubViewportPlayer2.gd" id="3_owwrw"]
+
+[node name="splitScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="HBoxContainer/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(574, 648)
+render_target_update_mode = 4
+script = ExtResource("1_2dxrn")
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer/SubViewportContainer/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewportContainer2" type="SubViewportContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="HBoxContainer/SubViewportContainer2"]
+handle_input_locally = false
+size = Vector2i(574, 648)
+render_target_update_mode = 4
+script = ExtResource("3_owwrw")
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer/SubViewportContainer2/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0

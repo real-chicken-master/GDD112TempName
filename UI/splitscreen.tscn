@@ -1,18 +1,32 @@
-[gd_scene load_steps=3 format=3 uid="uid://d2wh2ounbed2o"]
+[gd_scene load_steps=3 format=3 uid="uid://d4eduyht5d65x"]
 
-[ext_resource type="PackedScene" uid="uid://nx4ggy1h8ovm" path="res://players/player1/player1.tscn" id="1_8cyht"]
-[ext_resource type="PackedScene" uid="uid://djvanbdp8c7no" path="res://players/player 2/player2.tscn" id="2_ivl1e"]
+[sub_resource type="GDScript" id="GDScript_3ulip"]
+script/source = "extends SubViewport
 
-[node name="splitScreen" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	get_tree().get_first_node_in_group(\"player1\").set_remote_transform($Camera2D)
+	
+
+
+"
+
+[sub_resource type="GDScript" id="GDScript_eexgl"]
+script/source = "extends SubViewport
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	get_tree().get_first_node_in_group(\"player2\").set_remote_transform($Camera2D)
+	
+
+
+"
+
+[node name="splitscreen" type="Node"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -21,7 +35,6 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -37,12 +50,13 @@ stretch = true
 handle_input_locally = false
 size = Vector2i(574, 648)
 render_target_update_mode = 4
+script = SubResource("GDScript_3ulip")
 
 [node name="ColorRect" type="ColorRect" parent="HBoxContainer/SubViewportContainer/SubViewport"]
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="player1" parent="HBoxContainer/SubViewportContainer/SubViewport" instance=ExtResource("1_8cyht")]
+[node name="Camera2D" type="Camera2D" parent="HBoxContainer/SubViewportContainer/SubViewport"]
 
 [node name="SubViewportContainer2" type="SubViewportContainer" parent="HBoxContainer"]
 layout_mode = 2
@@ -53,9 +67,11 @@ stretch = true
 handle_input_locally = false
 size = Vector2i(574, 648)
 render_target_update_mode = 4
+script = SubResource("GDScript_eexgl")
 
 [node name="ColorRect" type="ColorRect" parent="HBoxContainer/SubViewportContainer2/SubViewport"]
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="player1" parent="HBoxContainer/SubViewportContainer2/SubViewport" instance=ExtResource("2_ivl1e")]
+[node name="Camera2D" type="Camera2D" parent="HBoxContainer/SubViewportContainer2/SubViewport"]
+position = Vector2(578, 0)

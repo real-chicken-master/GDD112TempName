@@ -37,3 +37,6 @@ func _input(event):
 				up = false
 			if event.keycode == KEY_DOWN:
 				down = false
+
+func set_remote_transform(path):
+	$RemoteTransform2D.remote_path = path.get_path()
