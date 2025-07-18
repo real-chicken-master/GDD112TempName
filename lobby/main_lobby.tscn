@@ -12,7 +12,7 @@
 position = Vector2(236, 237)
 
 [node name="Minigame 2" parent="Minigame Start" instance=ExtResource("2_d72ml")]
-position = Vector2(604, 73)
+position = Vector2(585, 73)
 
 [node name="Minigame 3" parent="Minigame Start" instance=ExtResource("3_ufeh7")]
 position = Vector2(921, 232)
