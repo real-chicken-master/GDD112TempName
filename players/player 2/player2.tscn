@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://djvanbdp8c7no"]
 
-[ext_resource type="Script" path="res://players/player1/player2.gd" id="1_q82fh"]
+[ext_resource type="Script" path="res://players/player 2/player2.gd" id="1_q82fh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bsqsj"]
 size = Vector2(50, 50)
@@ -9,7 +9,7 @@ size = Vector2(50, 50)
 size = Vector2(50, 50)
 
 [sub_resource type="Gradient" id="Gradient_27nrb"]
-colors = PackedColorArray(1, 0, 0, 1, 0.815686, 0, 0, 1)
+colors = PackedColorArray(0, 0, 1, 1, 0, 0, 1, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_uob3u"]
 gradient = SubResource("Gradient_27nrb")

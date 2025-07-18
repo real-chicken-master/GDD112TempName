@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://d2wh2ounbed2o"]
+[gd_scene load_steps=3 format=3 uid="uid://d2wh2ounbed2o"]
 
 [ext_resource type="PackedScene" uid="uid://nx4ggy1h8ovm" path="res://players/player1/player1.tscn" id="1_8cyht"]
+[ext_resource type="PackedScene" uid="uid://djvanbdp8c7no" path="res://players/player 2/player2.tscn" id="2_ivl1e"]
 
 [node name="splitScreen" type="Control"]
 layout_mode = 3
@@ -30,9 +31,11 @@ grow_vertical = 2
 [node name="SubViewportContainer" type="SubViewportContainer" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="HBoxContainer/SubViewportContainer"]
 handle_input_locally = false
+size = Vector2i(574, 648)
 render_target_update_mode = 4
 
 [node name="ColorRect" type="ColorRect" parent="HBoxContainer/SubViewportContainer/SubViewport"]
@@ -44,19 +47,15 @@ offset_bottom = 40.0
 [node name="SubViewportContainer2" type="SubViewportContainer" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="HBoxContainer/SubViewportContainer2"]
 handle_input_locally = false
-size = Vector2i(2, 648)
+size = Vector2i(574, 648)
 render_target_update_mode = 4
 
 [node name="ColorRect" type="ColorRect" parent="HBoxContainer/SubViewportContainer2/SubViewport"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="Camera2D" type="Camera2D" parent="HBoxContainer/SubViewportContainer2/SubViewport"]
+[node name="player1" parent="HBoxContainer/SubViewportContainer2/SubViewport" instance=ExtResource("2_ivl1e")]

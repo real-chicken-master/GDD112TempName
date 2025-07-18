@@ -20,20 +20,20 @@ func _process(delta):
 func _input(event):
 	if event is InputEventKey:
 		if(event.pressed):
-			if event.keycode == KEY_A:
+			if event.keycode == KEY_LEFT:
 				left = true
-			if event.keycode == KEY_D:
+			if event.keycode == KEY_RIGHT:
 				right = true
-			if event.keycode == KEY_W:
+			if event.keycode == KEY_UP:
 				up = true
-			if event.keycode == KEY_S:
+			if event.keycode == KEY_DOWN:
 				down = true
 		if(event.is_released()):
-			if event.keycode == KEY_A:
+			if event.keycode == KEY_LEFT:
 				left = false
-			if event.keycode == KEY_D:
+			if event.keycode == KEY_RIGHT:
 				right = false
-			if event.keycode == KEY_W:
+			if event.keycode == KEY_UP:
 				up = false
-			if event.keycode == KEY_S:
+			if event.keycode == KEY_DOWN:
 				down = false
