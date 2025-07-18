@@ -16,3 +16,5 @@ position = Vector2(604, 73)
 
 [node name="Minigame 3" parent="Minigame Start" instance=ExtResource("3_ufeh7")]
 position = Vector2(921, 232)
+
+[node name="players" type="Node2D" parent="."]
