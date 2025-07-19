@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="groupProject"
-run/main_scene="res://lobby/main_lobby.tscn"
+run/main_scene="res://UI/splitscreen.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Splitscreen="*res://UI/splitscreen.tscn"
+Globals="*res://globals/globals.gd"
 
 [dotnet]
 

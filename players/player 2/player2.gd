@@ -7,6 +7,8 @@ var left = false
 var right = false
 var up = false
 var down = false
+
+
 func _process(delta):
 	if(left):
 		global_position.x -= SPEED * delta
@@ -16,6 +18,7 @@ func _process(delta):
 		global_position.y -= SPEED * delta
 	if(down):
 		global_position.y += SPEED * delta
+
 
 func _input(event):
 	if event is InputEventKey:
@@ -37,6 +40,7 @@ func _input(event):
 				up = false
 			if event.keycode == KEY_DOWN:
 				down = false
+
 
 func set_remote_transform(path):
 	$RemoteTransform2D.set_remote_node(path.get_path())

@@ -1,7 +1,6 @@
 extends CharacterBody2D
 
 
-
 const SPEED = 300.0
 var left = false
 var right = false
@@ -40,6 +39,7 @@ func _input(event):
 				up = false
 			if event.keycode == KEY_S:
 				down = false
+
 
 func set_remote_transform(path):
 	$RemoteTransform2D.set_remote_node(path.get_path())
