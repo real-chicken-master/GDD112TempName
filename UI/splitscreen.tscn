@@ -23,8 +23,8 @@ script/source = "extends SubViewport
 @onready var player2 = get_tree().get_first_node_in_group(\"player2\")
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	world_2d = $\"../../SubViewportContainer/SubViewport\".world_2d
 	player2.set_remote_transform($Camera2D)
-	
 
 
 "
