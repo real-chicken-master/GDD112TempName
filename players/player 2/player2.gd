@@ -39,4 +39,4 @@ func _input(event):
 				down = false
 
 func set_remote_transform(path):
-	$RemoteTransform2D.remote_path = path.get_path()
+	$RemoteTransform2D.set_remote_node(path.get_path())

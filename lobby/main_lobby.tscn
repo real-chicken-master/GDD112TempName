@@ -9,8 +9,6 @@
 
 [node name="Main Lobby" type="Node2D"]
 
-[node name="game" parent="." instance=ExtResource("1_12er0")]
-
 [node name="Minigame Start" type="Node2D" parent="."]
 
 [node name="Minigame 1" parent="Minigame Start" instance=ExtResource("1_x04k7")]
@@ -27,3 +25,5 @@ position = Vector2(900, 250)
 [node name="player1" parent="players" instance=ExtResource("4_y57fi")]
 
 [node name="player2" parent="players" instance=ExtResource("5_3henv")]
+
+[node name="splitscreen" parent="." instance=ExtResource("1_12er0")]

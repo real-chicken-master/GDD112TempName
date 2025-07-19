@@ -3,11 +3,11 @@
 [sub_resource type="GDScript" id="GDScript_3ulip"]
 script/source = "extends SubViewport
 
-
+@onready var player1 = get_tree().get_first_node_in_group(\"player1\")
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	get_tree().get_first_node_in_group(\"player1\").set_remote_transform($Camera2D)
-	
+	player1.set_remote_transform($Camera2D)
+
 
 
 "
@@ -15,10 +15,10 @@ func _ready():
 [sub_resource type="GDScript" id="GDScript_eexgl"]
 script/source = "extends SubViewport
 
-
+@onready var player2 = get_tree().get_first_node_in_group(\"player2\")
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	get_tree().get_first_node_in_group(\"player2\").set_remote_transform($Camera2D)
+	player2.set_remote_transform($Camera2D)
 	
 
 
@@ -52,11 +52,8 @@ size = Vector2i(574, 648)
 render_target_update_mode = 4
 script = SubResource("GDScript_3ulip")
 
-[node name="ColorRect" type="ColorRect" parent="HBoxContainer/SubViewportContainer/SubViewport"]
-offset_right = 40.0
-offset_bottom = 40.0
-
 [node name="Camera2D" type="Camera2D" parent="HBoxContainer/SubViewportContainer/SubViewport"]
+position_smoothing_enabled = true
 
 [node name="SubViewportContainer2" type="SubViewportContainer" parent="HBoxContainer"]
 layout_mode = 2
@@ -69,9 +66,6 @@ size = Vector2i(574, 648)
 render_target_update_mode = 4
 script = SubResource("GDScript_eexgl")
 
-[node name="ColorRect" type="ColorRect" parent="HBoxContainer/SubViewportContainer2/SubViewport"]
-offset_right = 40.0
-offset_bottom = 40.0
-
 [node name="Camera2D" type="Camera2D" parent="HBoxContainer/SubViewportContainer2/SubViewport"]
 position = Vector2(578, 0)
+position_smoothing_enabled = true
