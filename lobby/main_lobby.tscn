@@ -9,11 +9,11 @@
 
 [node name="ConceptAetFoall" type="Sprite2D" parent="."]
 texture_repeat = 2
-position = Vector2(588, 310)
+position = Vector2(659, 335)
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("1_4t77j")
 region_enabled = true
-region_rect = Rect2(-1586.09, -1617.74, 4807.64, 3505.09)
+region_rect = Rect2(-4014.03, -2802.23, 12352, 12464.6)
 
 [node name="Minigame Start" type="Node2D" parent="."]
 
@@ -27,3 +27,6 @@ position = Vector2(575, 75)
 position = Vector2(900, 250)
 
 [node name="players" type="Node2D" parent="."]
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
