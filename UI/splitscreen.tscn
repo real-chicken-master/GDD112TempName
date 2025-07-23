@@ -61,6 +61,8 @@ script = SubResource("GDScript_3ulip")
 position_smoothing_enabled = true
 
 [node name="player1" parent="HBoxContainer/SubViewportContainer/SubViewport" instance=ExtResource("1_slcjd")]
+z_index = 2
+position = Vector2(25, 25)
 
 [node name="level switcher" parent="HBoxContainer/SubViewportContainer/SubViewport" instance=ExtResource("2_wf0tu")]
 
@@ -76,5 +78,7 @@ render_target_update_mode = 4
 script = SubResource("GDScript_eexgl")
 
 [node name="Camera2D" type="Camera2D" parent="HBoxContainer/SubViewportContainer2/SubViewport"]
+position_smoothing_enabled = true
 
 [node name="player2" parent="HBoxContainer/SubViewportContainer2/SubViewport" instance=ExtResource("2_5bn30")]
+position = Vector2(75, 25)

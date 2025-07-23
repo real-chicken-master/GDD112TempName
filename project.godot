@@ -22,3 +22,8 @@ Globals="*res://globals/globals.gd"
 [dotnet]
 
 project/assembly_name="groupProject"
+
+[layer_names]
+
+2d_physics/layer_1="players"
+2d_physics/layer_2="area change"

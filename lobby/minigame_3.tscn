@@ -8,6 +8,7 @@ radius = 55.0364
 [node name="Minigame 3" type="Node2D"]
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
 script = ExtResource("1_frd4a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
