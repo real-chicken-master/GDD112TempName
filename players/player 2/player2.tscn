@@ -16,6 +16,7 @@ gradient = SubResource("Gradient_27nrb")
 
 [node name="player2" type="CharacterBody2D" groups=["player2"]]
 z_index = 1
+collision_layer = 5
 script = ExtResource("1_q82fh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
