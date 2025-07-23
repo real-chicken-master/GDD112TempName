@@ -1,10 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://dxtgtd1cq23fw"]
+[gd_scene load_steps=5 format=3 uid="uid://dxtgtd1cq23fw"]
 
+[ext_resource type="Texture2D" uid="uid://neigjw7fl147" path="res://Texture and Mesh/concept aet foall.png" id="1_4t77j"]
 [ext_resource type="PackedScene" uid="uid://c6mx5yrnxiiqu" path="res://lobby/minigame_1.tscn" id="1_x04k7"]
 [ext_resource type="PackedScene" uid="uid://bvxji66hx528i" path="res://lobby/minigame_2.tscn" id="2_d72ml"]
 [ext_resource type="PackedScene" uid="uid://bwqor80lqgqvq" path="res://lobby/minigame_3.tscn" id="3_ufeh7"]
 
 [node name="Main Lobby" type="Node2D"]
+
+[node name="ConceptAetFoall" type="Sprite2D" parent="."]
+texture_repeat = 2
+position = Vector2(588, 310)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("1_4t77j")
+region_enabled = true
+region_rect = Rect2(-1586.09, -1617.74, 4807.64, 3505.09)
 
 [node name="Minigame Start" type="Node2D" parent="."]
 
