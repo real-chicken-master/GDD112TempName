@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://bvxji66hx528i"]
+[gd_scene load_steps=4 format=3 uid="uid://bvxji66hx528i"]
 
 [ext_resource type="Script" path="res://lobby/minigame_2.gd" id="1_20new"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mgy7x"]
 radius = 55.0364
+
+[sub_resource type="SphereMesh" id="SphereMesh_f7jqe"]
 
 [node name="Minigame 2" type="Node2D"]
 
@@ -13,3 +15,8 @@ script = ExtResource("1_20new")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_mgy7x")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(1.49012e-06, 1.0252e-05)
+scale = Vector2(110.125, 110)
+mesh = SubResource("SphereMesh_f7jqe")

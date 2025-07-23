@@ -10,7 +10,7 @@ var down = false
 
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	var direction = Input.get_vector("left1","right1","up1","down1")
 	velocity = direction * SPEED
 	move_and_slide()
