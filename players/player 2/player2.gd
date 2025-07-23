@@ -2,44 +2,20 @@ extends CharacterBody2D
 
 
 
-const SPEED = 300.0
+const SPEED = 200.0
 var left = false
 var right = false
 var up = false
 var down = false
 
 
-func _process(delta):
-	if(left):
-		global_position.x -= SPEED * delta
-	if(right):
-		global_position.x += SPEED * delta
-	if(up):
-		global_position.y -= SPEED * delta
-	if(down):
-		global_position.y += SPEED * delta
+func _physics_process(delta):
+	var direction = Input.get_vector("left2","right2","up2","down2")
+	velocity = direction * SPEED
+	move_and_slide()
 
 
-func _input(event):
-	if event is InputEventKey:
-		if(event.pressed):
-			if event.keycode == KEY_LEFT:
-				left = true
-			if event.keycode == KEY_RIGHT:
-				right = true
-			if event.keycode == KEY_UP:
-				up = true
-			if event.keycode == KEY_DOWN:
-				down = true
-		if(event.is_released()):
-			if event.keycode == KEY_LEFT:
-				left = false
-			if event.keycode == KEY_RIGHT:
-				right = false
-			if event.keycode == KEY_UP:
-				up = false
-			if event.keycode == KEY_DOWN:
-				down = false
+
 
 
 func set_remote_transform(path):
