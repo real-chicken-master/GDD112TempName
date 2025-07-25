@@ -14,7 +14,11 @@ func _physics_process(_delta):
 		velocity = direction * SPEED
 		rotation = direction.angle()
 		rotation_degrees += 90
-		move_and_slide()
+	if(movemode == "platformer"):
+		rotation_degrees = 0
+		var direction = Input.get_axis("left1","right1")
+		velocity.x = SPEED * direction * 1.5
+	move_and_slide()
 
 
 func set_remote_transform(path):

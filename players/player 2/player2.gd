@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var movemode = "topdown"
+var movemode = "platformer"
 const SPEED = 200.0
 var left = false
 var right = false
@@ -14,7 +14,12 @@ func _physics_process(_delta):
 		velocity = direction * SPEED
 		rotation = direction.angle()
 		rotation_degrees += 90
-		move_and_slide()
+		print("Top down")
+	if(movemode == "platformer"):
+		rotation_degrees = 0
+		var direction = Input.get_axis("left2","right2")
+		velocity.x = SPEED * direction * 1.5
+	move_and_slide()
 
 
 func set_remote_transform(path):
