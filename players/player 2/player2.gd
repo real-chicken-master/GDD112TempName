@@ -1,11 +1,17 @@
 extends CharacterBody2D
 
+<<<<<<< HEAD
 var movemode = "topdown"
+=======
+
+>>>>>>> 3c17372a08ce4cb4d91d799d206e12a3f163c91d
 const SPEED = 200.0
 var left = false
 var right = false
 var up = false
 var down = false
+
+
 
 
 func _physics_process(_delta):
@@ -15,9 +21,6 @@ func _physics_process(_delta):
 		rotation = direction.angle()
 		rotation_degrees += 90
 		move_and_slide()
-
-
-
 
 
 func set_remote_transform(path):
