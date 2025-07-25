@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bl7phb1bo0o7v"
-path="res://.godot/imported/concpet waill ART.png-329ca5a848ada99fbc5c2449bbaad621.ctex"
+uid="uid://kh4gp2wm86kq"
+path="res://.godot/imported/ArcadeWall.png-b21814c8724b5c399c9a2a3f0a114c40.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Texture and Mesh/concpet waill ART.png"
-dest_files=["res://.godot/imported/concpet waill ART.png-329ca5a848ada99fbc5c2449bbaad621.ctex"]
+source_file="res://Texture and Mesh/ArcadeWall.png"
+dest_files=["res://.godot/imported/ArcadeWall.png-b21814c8724b5c399c9a2a3f0a114c40.ctex"]
 
 [params]
 
