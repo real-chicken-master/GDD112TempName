@@ -1,7 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://nx4ggy1h8ovm"]
 
 [ext_resource type="Script" path="res://players/player1/player1.gd" id="1_b3iya"]
-[ext_resource type="Texture2D" uid="uid://dswqccqpk7vwr" path="res://Texture and Mesh/Concept/poeple concept art.png" id="2_41vxg"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cy6fr"]
+load_path = "res://.godot/imported/poeple concept art.png-2fc50ec5e3cac67ca15c8548a91ead49.ctex"
 
 [node name="player1" type="CharacterBody2D" groups=["player", "player1"]]
 z_index = 1
@@ -17,7 +19,7 @@ polygon = PackedVector2Array(-26.263, -13.9579, -26.7969, -0.765625, -38.0198, 0
 position = Vector2(-12, -3.99999)
 rotation = 1.5708
 scale = Vector2(0.4, 0.4)
-texture = ExtResource("2_41vxg")
+texture = SubResource("CompressedTexture2D_cy6fr")
 region_enabled = true
 region_rect = Rect2(292, 125, 206, 342)
 metadata/_edit_lock_ = true
