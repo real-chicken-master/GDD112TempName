@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://players/player 2/player2.gd" id="1_q82fh"]
 [ext_resource type="Texture2D" uid="uid://dsrte1ogpe5sq" path="res://Texture and Mesh/concept art play 2.png" id="2_ko3mr"]
 
-[node name="player2" type="CharacterBody2D" groups=["player2"]]
+[node name="player2" type="CharacterBody2D" groups=["player", "player2"]]
 z_index = 1
 scale = Vector2(0.7, 0.7)
 collision_layer = 5

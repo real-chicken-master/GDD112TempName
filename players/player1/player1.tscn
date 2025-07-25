@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://players/player1/player1.gd" id="1_b3iya"]
 [ext_resource type="Texture2D" uid="uid://driyx6c3aa7ck" path="res://Texture and Mesh/poeple concept art.png" id="2_41vxg"]
 
-[node name="player1" type="CharacterBody2D" groups=["player1"]]
+[node name="player1" type="CharacterBody2D" groups=["player", "player1"]]
 z_index = 1
 collision_mask = 5
 script = ExtResource("1_b3iya")
