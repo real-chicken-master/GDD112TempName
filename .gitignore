@@ -1,3 +1,4 @@
 # Godot 4+ specific ignores
 .godot/
 poeple concept art.png.import
+.import
