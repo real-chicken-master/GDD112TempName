@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://nx4ggy1h8ovm"]
 
 [ext_resource type="Script" path="res://players/player1/player1.gd" id="1_b3iya"]
-[ext_resource type="Texture2D" uid="uid://driyx6c3aa7ck" path="res://Texture and Mesh/poeple concept art.png" id="2_41vxg"]
+[ext_resource type="Texture2D" uid="uid://dswqccqpk7vwr" path="res://Texture and Mesh/Concept/poeple concept art.png" id="2_41vxg"]
 
 [node name="player1" type="CharacterBody2D" groups=["player1"]]
 z_index = 1

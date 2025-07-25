@@ -1,12 +1,13 @@
 extends CharacterBody2D
 
 
-
 const SPEED = 200.0
 var left = false
 var right = false
 var up = false
 var down = false
+
+
 
 
 func _physics_process(_delta):
@@ -15,9 +16,6 @@ func _physics_process(_delta):
 	rotation = direction.angle()
 	rotation_degrees += 90
 	move_and_slide()
-
-
-
 
 
 func set_remote_transform(path):
