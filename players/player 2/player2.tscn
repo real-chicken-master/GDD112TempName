@@ -1,29 +1,26 @@
-[gd_scene load_steps=6 format=3 uid="uid://djvanbdp8c7no"]
+[gd_scene load_steps=3 format=3 uid="uid://djvanbdp8c7no"]
 
 [ext_resource type="Script" path="res://players/player 2/player2.gd" id="1_q82fh"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bsqsj"]
-size = Vector2(50, 50)
-
-[sub_resource type="QuadMesh" id="QuadMesh_rc8nc"]
-size = Vector2(50, 50)
-
-[sub_resource type="Gradient" id="Gradient_27nrb"]
-colors = PackedColorArray(0, 0, 1, 1, 0, 0, 1, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_uob3u"]
-gradient = SubResource("Gradient_27nrb")
+[ext_resource type="Texture2D" uid="uid://dsrte1ogpe5sq" path="res://Texture and Mesh/concept art play 2.png" id="2_ko3mr"]
 
 [node name="player2" type="CharacterBody2D" groups=["player2"]]
 z_index = 1
+scale = Vector2(0.7, 0.7)
 collision_layer = 5
 script = ExtResource("1_q82fh")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_bsqsj")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-2.04524, 0.63208)
+rotation = 1.5708
+scale = Vector2(0.4, 0.4)
+polygon = PackedVector2Array(6, -98, -42, -98, -80, -94, -106, -81, -112, -75, -115, -65, -116, -59, -116, -42, -114.463, -25.7794, -111.322, -6.53639, -103.643, 17.4365, -92.9677, 40.0984, -78.7338, 68.379, -55.3227, 85.6095, -19.7379, 104.9, -5.69128, 107.897, 7.79346, 107.71, 16.3169, 152.542, -2.59929, 154.789, -13.6493, 155.164, -42.4917, 148.234, -72.6451, 146.174, -96.4308, 147.297, -102.986, 155.913, -106.357, 165.09, -106.544, 175.391, -91.9358, 191.872, -79.2002, 205.357, -70.2104, 215.096, -55.9765, 223.524, -32.94, 224.648, 19.1262, 216.407, 43.2864, 211.537, 63.1389, 185.317, 63.5135, 163.592, 58.644, 153.478, 57.0502, 82.8002, 91.6985, 60.1383, 111.738, 39.5366, 119.417, 17.9984, 123.35, -16.8372, 124.849, -35.7534, 123.538, -50.1746, 111.738, -70.7763, 102.561, -79.7661, 89.4511, -85.5721, 73.157, -90.8161, 48.9968, -96.0602, 44.8765, -154.12, 63.418, -169.103, 71.0968, -179.029, 73.5316, -188.768, 75.9663, -201.129, 75.0299, -210.681, 72.7824, -218.36, 67.9129, -225.289, 59.6722, -235.403, 33.2646, -234.279, -11.3101, -232.968, -46.8949, -236.152, -65.4364, -237.463, -86.9746, -237.463, -107.576, -228.848, -119.001, -219.671, -124.994, -213.677, -125.181, -189.704, -115.068, -169.665, -108.7, -164.42, -87.3492, -166.293, -57.9449, -167.043, -13.9321, -180.153, -1.57109, -176.032, 4.60947, -156.929, 0.48912, -139.698, -1.19647, -117.786, 2.92387, -106.923)
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
-mesh = SubResource("QuadMesh_rc8nc")
-texture = SubResource("GradientTexture1D_uob3u")
+[node name="ConceptArtPlay2" type="Sprite2D" parent="."]
+rotation = 1.5708
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_ko3mr")
+region_enabled = true
+region_rect = Rect2(239, 71, 253, 473)
+metadata/_edit_lock_ = true
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]

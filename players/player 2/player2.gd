@@ -12,6 +12,8 @@ var down = false
 func _physics_process(_delta):
 	var direction = Input.get_vector("left2","right2","up2","down2")
 	velocity = direction * SPEED
+	rotation = direction.angle()
+	rotation_degrees += 90
 	move_and_slide()
 
 
