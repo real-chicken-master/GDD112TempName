@@ -1,7 +1,11 @@
 [gd_scene load_steps=5 format=3 uid="uid://q7nneddn7er0"]
 
 [ext_resource type="Texture2D" uid="uid://d35k7uy35vj6h" path="res://Texture and Mesh/Platform.png" id="1_kjxtr"]
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://nx4ggy1h8ovm" path="res://players/player1/player1.tscn" id="2_38vnt"]
+=======
+[ext_resource type="PackedScene" uid="uid://nx4ggy1h8ovm" path="res://players/player1/player1.tscn" id="2_3uv7w"]
+>>>>>>> Stashed changes
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iowm3"]
 texture = ExtResource("1_kjxtr")
@@ -9,7 +13,10 @@ texture_region_size = Vector2i(200, 200)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
+<<<<<<< Updated upstream
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-100, -100, 100, -100, 100, 100, -100, 100)
+=======
+>>>>>>> Stashed changes
 1:0/0 = 0
 1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:0/0/physics_layer_0/angular_velocity = 0.0
@@ -450,7 +457,13 @@ sources/0 = SubResource("TileSetAtlasSource_iowm3")
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_ncqxv")
 format = 2
+<<<<<<< Updated upstream
 layer_0/tile_data = PackedInt32Array(131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0)
 
 [node name="player1" parent="." instance=ExtResource("2_38vnt")]
 position = Vector2(114, 362)
+=======
+layer_0/tile_data = PackedInt32Array(131071, 0, 0, 65536, 0, 0, 65537, 0, 0)
+
+[node name="player1" parent="." instance=ExtResource("2_3uv7w")]
+>>>>>>> Stashed changes
