@@ -7,7 +7,6 @@ var right = false
 var up = false
 var down = false
 var canjump = true
-var jumping = false
 
 
 func _physics_process(_delta):
