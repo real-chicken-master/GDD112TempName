@@ -8,7 +8,6 @@ var up = false
 var down = false
 var canjump = true
 
-
 func _physics_process(_delta):
 	if(movemode == "topdown"):
 		set_collision_mask_value(1,true)
