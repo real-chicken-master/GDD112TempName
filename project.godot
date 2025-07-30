@@ -68,6 +68,7 @@ right2={
 
 [layer_names]
 
-2d_physics/layer_1="players"
-2d_physics/layer_2="area change"
+2d_physics/layer_1="Players"
+2d_physics/layer_2="Area Change"
 2d_physics/layer_3="Borders"
+2d_physics/layer_4="Dangerous"
