@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://q7nneddn7er0"]
+[gd_scene load_steps=7 format=3 uid="uid://q7nneddn7er0"]
 
-[ext_resource type="Texture2D" uid="uid://d1fkvha7ywcvk" path="res://Texture and Mesh/Platform.png" id="1_kjxtr"]
-[ext_resource type="Texture2D" uid="uid://cktm1xqbgm0q5" path="res://Texture and Mesh/SPIKEFinal.png" id="2_7st44"]
+[ext_resource type="Texture2D" uid="uid://d35k7uy35vj6h" path="res://Texture and Mesh/Platform.png" id="1_kjxtr"]
+[ext_resource type="Texture2D" uid="uid://deosc17d6lr88" path="res://Texture and Mesh/SPIKEFinal.png" id="2_7st44"]
+[ext_resource type="PackedScene" uid="uid://nx4ggy1h8ovm" path="res://players/player1/player1.tscn" id="3_sxoqm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iowm3"]
 texture = ExtResource("1_kjxtr")
@@ -751,3 +752,8 @@ sources/1 = SubResource("TileSetAtlasSource_jln4n")
 tile_set = SubResource("TileSet_ncqxv")
 format = 2
 layer_0/tile_data = PackedInt32Array(65534, 0, 0, 65535, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, -65533, 1, 0, 65533, 0, 0, 65532, 0, 0, -4, 1, 0, -3, 1, 0, -65534, 1, 0)
+
+[node name="player1" parent="." instance=ExtResource("3_sxoqm")]
+position = Vector2(-305, -44)
+
+[node name="Camera2D" type="Camera2D" parent="player1"]
