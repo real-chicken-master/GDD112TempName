@@ -17,7 +17,8 @@ func _ready():
 		for numY in MAZE_HEIGHT:
 			mazeArray[numX].append(true)
 	while(!mapbuilt):
-		pass
+		mazeArray[1][1] = false
+		mapbuilt = true
 	for numX in MAZE_WIDTH:
 		for numY in MAZE_HEIGHT:
 			if mazeArray[numX][numY]:

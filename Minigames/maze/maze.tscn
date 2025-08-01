@@ -1,22 +1,28 @@
 [gd_scene load_steps=8 format=3 uid="uid://b4my264vw45n"]
 
 [ext_resource type="Script" path="res://Minigames/maze/maze.gd" id="1_d5sv8"]
-[ext_resource type="Texture2D" uid="uid://ddtret1yp6gwt" path="res://Texture and Mesh/ArcadeWall.png" id="2_03dtj"]
-[ext_resource type="Texture2D" uid="uid://d1fkvha7ywcvk" path="res://Texture and Mesh/Platform.png" id="3_okhaf"]
+[ext_resource type="Texture2D" uid="uid://d3kie7yi2ut5b" path="res://Texture and Mesh/ArcadeWall.png" id="2_03dtj"]
+[ext_resource type="Texture2D" uid="uid://m8nn1gxi3xjq" path="res://Texture and Mesh/Platform.png" id="3_okhaf"]
 [ext_resource type="PackedScene" uid="uid://nx4ggy1h8ovm" path="res://players/player1/player1.tscn" id="4_pis5f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vrrjp"]
 texture = ExtResource("2_03dtj")
 texture_region_size = Vector2i(500, 500)
 0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-250, -250, 250, -250, 250, 250, -250, 250)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0p2ht"]
 texture = ExtResource("3_okhaf")
 texture_region_size = Vector2i(200, 200)
 0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSet" id="TileSet_niln0"]
 tile_size = Vector2i(500, 500)
+physics_layer_0/collision_layer = 4
 sources/0 = SubResource("TileSetAtlasSource_vrrjp")
 sources/2 = SubResource("TileSetAtlasSource_0p2ht")
 
@@ -29,7 +35,7 @@ tile_set = SubResource("TileSet_niln0")
 format = 2
 
 [node name="player1" parent="." instance=ExtResource("4_pis5f")]
-position = Vector2(1558, 865)
+position = Vector2(213, 182)
 
 [node name="Camera2D" type="Camera2D" parent="player1" groups=["camera"]]
 metadata/_edit_lock_ = true
