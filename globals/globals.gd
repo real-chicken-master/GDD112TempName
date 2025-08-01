@@ -9,6 +9,5 @@ var movemode = "topdown":
 			player.movemode = mode
 
 func change_scene(level):
-	print(level)
 	var levelSwitcher = get_tree().get_first_node_in_group("levelSwitcher")
 	levelSwitcher.level = level
