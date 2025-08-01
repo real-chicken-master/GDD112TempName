@@ -20,24 +20,12 @@ func _physics_process(_delta):
 		rotation_degrees = 0
 		var direction = Input.get_axis("left2","right2")
 		velocity.x = SPEED * direction * 1.5
+		if(is_on_floor()):
+			if Input.is_action_just_pressed("up1"):
+				velocity.y -= 1000
+		else:
+			velocity.y += 100
 	move_and_slide()
-
-func jump():
-	velocity.y -= 200
-	await get_tree().create_timer(0.01).timeout
-	while(!is_on_floor()):
-		velocity.y += 2
-		await get_tree().create_timer(0.01).timeout
-	canjump = true
-
-func _input(event):
-	if(event is InputEventKey):
-			if(event.pressed):
-				if(movemode == "platformer"):
-					if(event.keycode == KEY_UP):
-						if(canjump):
-							canjump = false
-							jump()
 
 func set_remote_transform(path):
 	$RemoteTransform2D.set_remote_node(path.get_path())
