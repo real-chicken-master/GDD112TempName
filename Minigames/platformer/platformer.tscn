@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://q7nneddn7er0"]
+[gd_scene load_steps=8 format=3 uid="uid://q7nneddn7er0"]
 
 [ext_resource type="Texture2D" uid="uid://d35k7uy35vj6h" path="res://Texture and Mesh/Platform.png" id="1_kjxtr"]
 [ext_resource type="Texture2D" uid="uid://deosc17d6lr88" path="res://Texture and Mesh/SPIKEFinal.png" id="2_7st44"]
 [ext_resource type="PackedScene" uid="uid://nx4ggy1h8ovm" path="res://players/player1/player1.tscn" id="3_sxoqm"]
+[ext_resource type="PackedScene" uid="uid://bp5nfx815koha" path="res://Minigames/platformer/spikereal.tscn" id="4_3rbv8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iowm3"]
 texture = ExtResource("1_kjxtr")
@@ -750,13 +751,44 @@ sources/1 = SubResource("TileSetAtlasSource_jln4n")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(3, 0)
+scale = Vector2(0.993411, 1)
 tile_set = SubResource("TileSet_ncqxv")
 format = 2
-layer_0/tile_data = PackedInt32Array(65534, 0, 0, 65535, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, -65533, 1, 0, 65533, 0, 0, 65532, 0, 0, -4, 1, 0, -3, 1, 0, -65534, 1, 0, 65531, 0, 0, 65530, 0, 0, 65529, 0, 0, -5, 1, 0)
+layer_0/tile_data = PackedInt32Array(65534, 0, 0, 65535, 0, 0, 0, 0, 0, 1, 0, 0, 3, 0, 0, 65533, 0, 0, 65532, 0, 0, 65531, 0, 0, 65530, 0, 0, 65529, 0, 0, -6, 0, 0, -7, 0, 0, -196613, 0, 0, -65544, 0, 0, -196616, 0, 0, 2, 0, 0, -196612, 0, 0, -196611, 0, 0, -65545, 0, 0, -196615, 0, 0)
 
 [node name="player1" parent="." instance=ExtResource("3_sxoqm")]
-position = Vector2(-106, -193)
-scale = Vector2(3.5, 3.5)
+position = Vector2(-252, -154)
+scale = Vector2(1.5, 1.5)
 
 [node name="Camera2D" type="Camera2D" parent="player1"]
 zoom = Vector2(0.5, 0.5)
+
+[node name="spikybox" type="Node2D" parent="."]
+
+[node name="spikereal" parent="spikybox" instance=ExtResource("4_3rbv8")]
+position = Vector2(-894, -102)
+
+[node name="spikereal2" parent="spikybox" instance=ExtResource("4_3rbv8")]
+position = Vector2(-893, -500)
+rotation = 3.14159
+
+[node name="spikereal3" parent="spikybox" instance=ExtResource("4_3rbv8")]
+position = Vector2(-693, -500)
+rotation = 3.13789
+
+[node name="spikereal4" parent="spikybox" instance=ExtResource("4_3rbv8")]
+position = Vector2(-495, -495)
+rotation = 3.13789
+
+[node name="spikereal5" parent="spikybox" instance=ExtResource("4_3rbv8")]
+position = Vector2(-1097, -305)
+
+[node name="spikereal6" parent="spikybox" instance=ExtResource("4_3rbv8")]
+position = Vector2(-694, -102)
+
+[node name="spikereal7" parent="spikybox" instance=ExtResource("4_3rbv8")]
+position = Vector2(-496, -97)
+
+[node name="spikereal8" parent="spikybox" instance=ExtResource("4_3rbv8")]
+position = Vector2(-1486, -438)
+scale = Vector2(1, 0.400001)
