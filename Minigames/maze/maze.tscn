@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://b4my264vw45n"]
 
 [ext_resource type="Script" path="res://Minigames/maze/maze.gd" id="1_d5sv8"]
-[ext_resource type="Texture2D" uid="uid://kh4gp2wm86kq" path="res://Texture and Mesh/Concept/ArcadeWall.png" id="2_p83d8"]
-[ext_resource type="Texture2D" uid="uid://m8nn1gxi3xjq" path="res://Texture and Mesh/Platform.png" id="3_okhaf"]
+[ext_resource type="Texture2D" uid="uid://ddtret1yp6gwt" path="res://Texture and Mesh/ArcadeWall.png" id="2_03dtj"]
+[ext_resource type="Texture2D" uid="uid://d1fkvha7ywcvk" path="res://Texture and Mesh/Platform.png" id="3_okhaf"]
 [ext_resource type="PackedScene" uid="uid://nx4ggy1h8ovm" path="res://players/player1/player1.tscn" id="4_pis5f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vrrjp"]
-texture = ExtResource("2_p83d8")
+texture = ExtResource("2_03dtj")
 texture_region_size = Vector2i(500, 500)
 0:0/0 = 0
 
