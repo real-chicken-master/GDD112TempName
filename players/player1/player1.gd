@@ -18,12 +18,11 @@ func _physics_process(_delta):
 	if(movemode == "platformer"):
 		set_collision_mask_value(1,false)
 		rotation_degrees = 0
-		rotate + 90
 		var direction = Input.get_axis("left1","right1")
 		velocity.x = SPEED * direction * 1.5
 		if(is_on_floor()):
 			if Input.is_action_just_pressed("up1"):
-				velocity.y -= 770
+				velocity.y -= 1000
 		else:
 			velocity.y += 20
 	move_and_slide()
