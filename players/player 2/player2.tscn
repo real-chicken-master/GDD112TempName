@@ -1,26 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://djvanbdp8c7no"]
+[gd_scene load_steps=4 format=3 uid="uid://djvanbdp8c7no"]
 
 [ext_resource type="Script" path="res://players/player 2/player2.gd" id="1_q82fh"]
-[ext_resource type="Texture2D" uid="uid://ctgsafco5k8xo" path="res://Texture and Mesh/Concept/concept art play 2.png" id="2_ko3mr"]
+[ext_resource type="Texture2D" uid="uid://bcn4bmdihu545" path="res://Texture and Mesh/lowquality-20250801__1_-removebg-preview.png" id="2_5jfry"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2kqkd"]
+radius = 45.0
 
 [node name="player2" type="CharacterBody2D" groups=["player", "player2"]]
 z_index = 1
-scale = Vector2(0.7, 0.7)
 collision_mask = 5
 script = ExtResource("1_q82fh")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2(-2.04524, 0.63208)
-rotation = 1.5708
-scale = Vector2(0.4, 0.4)
-polygon = PackedVector2Array(6, -98, -42, -98, -80, -94, -106, -81, -112, -75, -115, -65, -116, -59, -116, -42, -114.463, -25.7794, -111.322, -6.53639, -103.643, 17.4365, -92.9677, 40.0984, -78.7338, 68.379, -55.3227, 85.6095, -19.7379, 104.9, -5.69128, 107.897, 7.79346, 107.71, 16.3169, 152.542, 0.399675, 156.023, 2.28004, 219.073, 19.1262, 216.407, 43.2864, 211.537, 63.1389, 185.317, 63.5135, 163.592, 58.644, 153.478, 57.0502, 82.8002, 91.6985, 60.1383, 111.738, 39.5366, 119.417, 17.9984, 123.35, -16.8372, 124.849, -35.7534, 123.538, -50.1746, 111.738, -70.7763, 102.561, -79.7661, 89.4511, -85.5721, 73.157, -90.8161, 48.9968, -96.0602, 44.8765, -154.12, 63.418, -169.103, 71.0968, -179.029, 73.5316, -188.768, 75.9663, -201.129, 75.0299, -210.681, 72.7824, -218.36, 67.9129, -225.289, 59.6722, -235.403, 33.2646, -234.279, -11.3101, -232.968, -13.9321, -180.153, -1.57109, -176.032, 4.60947, -156.929, 0.48912, -139.698, -1.19647, -117.786, 2.92387, -106.923)
-
-[node name="ConceptArtPlay2" type="Sprite2D" parent="."]
-rotation = 1.5708
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("2_ko3mr")
-region_enabled = true
-region_rect = Rect2(239, 71, 253, 473)
-metadata/_edit_lock_ = true
-
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 1)
+scale = Vector2(1, 1)
+shape = SubResource("CircleShape2D_2kqkd")
+
+[node name="Lowquality-202508011-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(-4, -2)
+scale = Vector2(0.53629, 0.335887)
+texture = ExtResource("2_5jfry")

@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var movemode = "topdown"
-const SPEED = 200.0
+const SPEED = 500.0
 var left = false
 var right = false
 var up = false

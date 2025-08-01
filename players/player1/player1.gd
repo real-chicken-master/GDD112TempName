@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var movemode = "platformer"
+var movemode = "topdown"
 const SPEED = 500.0
 var left = false
 var right = false
@@ -22,7 +22,7 @@ func _physics_process(_delta):
 		velocity.x = SPEED * direction * 1.5
 		if(is_on_floor()):
 			if Input.is_action_just_pressed("up1"):
-				velocity.y -= 770
+				velocity.y -= 1000
 		else:
 			velocity.y += 20
 	move_and_slide()
