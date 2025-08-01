@@ -737,7 +737,7 @@ texture_region_size = Vector2i(200, 200)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 0:0/0/physics_layer_1/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_1/angular_velocity = 0.0
-0:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-1.5, -95.5, 17.5, -49.5, 32, -12, 52, 27, 100, 100, -100, 100, -32, -40, -14, -76)
+0:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-10, 1, -9, 0, 43.8406, 100, -52.3259, 100)
 
 [sub_resource type="TileSet" id="TileSet_ncqxv"]
 tile_size = Vector2i(200, 200)
@@ -749,11 +749,14 @@ sources/1 = SubResource("TileSetAtlasSource_jln4n")
 [node name="platformer" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
+position = Vector2(3, 0)
 tile_set = SubResource("TileSet_ncqxv")
 format = 2
-layer_0/tile_data = PackedInt32Array(65534, 0, 0, 65535, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, -65533, 1, 0, 65533, 0, 0, 65532, 0, 0, -4, 1, 0, -3, 1, 0, -65534, 1, 0)
+layer_0/tile_data = PackedInt32Array(65534, 0, 0, 65535, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, -65533, 1, 0, 65533, 0, 0, 65532, 0, 0, -4, 1, 0, -3, 1, 0, -65534, 1, 0, 65531, 0, 0, 65530, 0, 0, 65529, 0, 0, -5, 1, 0)
 
 [node name="player1" parent="." instance=ExtResource("3_sxoqm")]
-position = Vector2(-305, -44)
+position = Vector2(-106, -193)
+scale = Vector2(3.5, 3.5)
 
 [node name="Camera2D" type="Camera2D" parent="player1"]
+zoom = Vector2(0.5, 0.5)
