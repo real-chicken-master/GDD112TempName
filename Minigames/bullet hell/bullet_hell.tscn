@@ -1,3 +1,47 @@
-[gd_scene format=3 uid="uid://eeybgencwyvj"]
+[gd_scene load_steps=7 format=3 uid="uid://caehaixig1qq1"]
+
+[ext_resource type="Script" path="res://Minigames/bullet hell/bullet_hell.gd" id="1_4bkeb"]
+[ext_resource type="Texture2D" uid="uid://dlcunnpr6ualn" path="res://Texture and Mesh/ArcadeWall.png" id="2_vyarn"]
+[ext_resource type="PackedScene" uid="uid://nx4ggy1h8ovm" path="res://players/player1/player1.tscn" id="3_pwhob"]
+[ext_resource type="PackedScene" uid="uid://djvanbdp8c7no" path="res://players/player 2/player2.tscn" id="4_fxei0"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bt7ju"]
+texture = ExtResource("2_vyarn")
+texture_region_size = Vector2i(500, 500)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ih0d7"]
+tile_size = Vector2i(500, 500)
+sources/0 = SubResource("TileSetAtlasSource_bt7ju")
 
 [node name="Bullet Hell" type="Node2D"]
+script = ExtResource("1_4bkeb")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_ih0d7")
+format = 2
+layer_0/tile_data = PackedInt32Array(-131070, 0, 0, -65534, 0, 0, 2, 0, 0, 65538, 0, 0, 65537, 0, 0, 65536, 0, 0, 131071, 0, 0, 131070, 0, 0, 131069, 0, 0, 65533, 0, 0, -3, 0, 0, -65539, 0, 0, -65538, 0, 0, -65537, 0, 0, -131072, 0, 0, -131071, 0, 0)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.51, 0.51)
+metadata/_edit_lock_ = true
+
+[node name="player1" parent="." instance=ExtResource("3_pwhob")]
+position = Vector2(-108, 0)
+
+[node name="player2" parent="." instance=ExtResource("4_fxei0")]
+position = Vector2(131, -5)
+
+[node name="Bullet Spawns" type="Node2D" parent="."]
+
+[node name="Bullet Spawn 1" type="Marker2D" parent="Bullet Spawns"]
+position = Vector2(-1608, 0)
+
+[node name="Bullet Spawn 2" type="Marker2D" parent="Bullet Spawns"]
+position = Vector2(0, -1058)
+
+[node name="Bullet Spawn 3" type="Marker2D" parent="Bullet Spawns"]
+position = Vector2(1608, 0)
+
+[node name="Bullet Spawn 4" type="Marker2D" parent="Bullet Spawns"]
+position = Vector2(0, 1058)
