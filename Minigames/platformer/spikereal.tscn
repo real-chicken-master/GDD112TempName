@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bp5nfx815koha"]
+
+[ext_resource type="Script" path="res://Minigames/platformer/platformer.gd" id="1_l14x7"]
+[ext_resource type="Texture2D" uid="uid://deosc17d6lr88" path="res://Texture and Mesh/SPIKEFinal.png" id="1_nqguq"]
+
+[node name="spikereal" type="Area2D"]
+collision_layer = 32
+script = ExtResource("1_l14x7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_nqguq")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-4, -1)
+polygon = PackedVector2Array(2, -3, -69, 102, 80, 100)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
