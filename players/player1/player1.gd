@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var movemode = "platformer"
+var movemode = "topdown"
 const SPEED = 500.0
 var left = false
 var right = false
@@ -18,6 +18,7 @@ func _physics_process(_delta):
 	if(movemode == "platformer"):
 		set_collision_mask_value(1,false)
 		rotation_degrees = 0
+		rotate + 90
 		var direction = Input.get_axis("left1","right1")
 		velocity.x = SPEED * direction * 1.5
 		if(is_on_floor()):

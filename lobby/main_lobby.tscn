@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://dxtgtd1cq23fw"]
+[gd_scene load_steps=9 format=3 uid="uid://dxtgtd1cq23fw"]
 
 [ext_resource type="Texture2D" uid="uid://neigjw7fl147" path="res://Texture and Mesh/Concept/concept aet foall.png" id="1_dwxfc"]
+[ext_resource type="Script" path="res://lobby/main_lobby.gd" id="1_vtgsn"]
 [ext_resource type="PackedScene" uid="uid://c6mx5yrnxiiqu" path="res://lobby/minigame_1.tscn" id="1_x04k7"]
 [ext_resource type="PackedScene" uid="uid://bvxji66hx528i" path="res://lobby/minigame_2.tscn" id="2_d72ml"]
 [ext_resource type="PackedScene" uid="uid://bwqor80lqgqvq" path="res://lobby/minigame_3.tscn" id="3_ufeh7"]
-[ext_resource type="Texture2D" uid="uid://d3kie7yi2ut5b" path="res://Texture and Mesh/ArcadeWall.png" id="5_th5fa"]
+[ext_resource type="Texture2D" uid="uid://beeektus3ov5q" path="res://Texture and Mesh/ArcadeWall.png" id="5_th5fa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vdirs"]
 texture = ExtResource("5_th5fa")
@@ -20,6 +21,7 @@ physics_layer_0/collision_layer = 4
 sources/0 = SubResource("TileSetAtlasSource_vdirs")
 
 [node name="Main Lobby" type="Node2D"]
+script = ExtResource("1_vtgsn")
 
 [node name="ConceptAetFoall" type="Sprite2D" parent="."]
 texture_repeat = 2
