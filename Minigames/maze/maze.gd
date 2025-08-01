@@ -17,7 +17,36 @@ func _ready():
 		for numY in MAZE_HEIGHT:
 			mazeArray[numX].append(true)
 	while(!mapbuilt):
+		var X = 1
+		var Y = 1
 		mazeArray[1][1] = false
+		for num in 100:
+			print(num)
+			var moved = false
+			while (!moved):
+				var direction = randi_range(1,4)
+				match direction:
+					1:
+						if(Y-1 != 0):
+							if(mazeArray[X][Y-1] == true && mazeArray[X][Y-2]) != false:
+								Y -= 1
+								moved = true
+					2:
+						if(Y+1 != MAZE_HEIGHT-1):
+							if(mazeArray[X][Y+1] == true && mazeArray[X][Y+2]) != false:
+								Y += 1
+								moved = true
+					3:
+						if(X-1 != 0):
+							if(mazeArray[X-1][Y] == true && mazeArray[X-2][Y]) != false:
+								X -= 1
+								moved = true
+					4:
+						if(X+1 != MAZE_HEIGHT-1):
+							if(mazeArray[X+1][Y] == true && mazeArray[X+2][Y]) != false:
+								X += 1
+								moved = true
+			mazeArray[X][Y] = false
 		mapbuilt = true
 	for numX in MAZE_WIDTH:
 		for numY in MAZE_HEIGHT:

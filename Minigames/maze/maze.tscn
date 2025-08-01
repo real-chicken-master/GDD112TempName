@@ -30,12 +30,12 @@ sources/2 = SubResource("TileSetAtlasSource_0p2ht")
 script = ExtResource("1_d5sv8")
 
 [node name="TileMap" type="TileMap" parent="."]
-scale = Vector2(0.26, 0.26)
+scale = Vector2(0.495, 0.495)
 tile_set = SubResource("TileSet_niln0")
 format = 2
 
 [node name="player1" parent="." instance=ExtResource("4_pis5f")]
-position = Vector2(213, 182)
+position = Vector2(379, 312)
 
 [node name="Camera2D" type="Camera2D" parent="player1" groups=["camera"]]
 metadata/_edit_lock_ = true
