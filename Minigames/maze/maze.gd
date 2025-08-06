@@ -23,25 +23,25 @@ func _ready():
 				match direction:
 					1:
 						if(Y-1 != 0):
-							if(mazeArray[X][Y-1] == true && mazeArray[X][Y-2]):
+							if(mazeArray[X][Y-1] && mazeArray[X][Y-2]):
 								if(tileHasSpace(X,Y-1,direction)):
 									Y -= 1
 									moved = true
 					2:
 						if(Y+1 != MAZE_HEIGHT-1):
-							if(mazeArray[X][Y+1] == true && mazeArray[X][Y+2]):
+							if(mazeArray[X][Y+1] && mazeArray[X][Y+2]):
 								if(tileHasSpace(X,Y+1,direction)):
 									Y += 1
 									moved = true
 					3:
 						if(X-1 != 0):
-							if(mazeArray[X-1][Y] == true && mazeArray[X-2][Y]):
+							if(mazeArray[X-1][Y] && mazeArray[X-2][Y]):
 								if(tileHasSpace(X-1,Y,direction)):
 									X -= 1
 									moved = true
 					4:
 						if(X+1 != MAZE_WIDTH-1):
-							if(mazeArray[X+1][Y] == true && mazeArray[X+2][Y]):
+							if(mazeArray[X+1][Y] && mazeArray[X+2][Y]):
 								if(tileHasSpace(X+1,Y,direction)):
 									X += 1
 									moved = true
@@ -57,31 +57,47 @@ func _ready():
 func canMove(X,Y):
 	var Return = false
 	if(Y-1 != 0):
-		if(mazeArray[X][Y-1] == true && mazeArray[X][Y-2]):
+		if(mazeArray[X][Y-1] && mazeArray[X][Y-2]):
 			Return = true
 	if(Y+1 != MAZE_HEIGHT-1):
-		if(mazeArray[X][Y+1] == true && mazeArray[X][Y+2]):
+		if(mazeArray[X][Y+1] && mazeArray[X][Y+2]):
 			Return = true
 	if(X-1 != 0):
-		if(mazeArray[X-1][Y] == true && mazeArray[X-2][Y]):
+		if(mazeArray[X-1][Y] && mazeArray[X-2][Y]):
 			Return = true
 	if(X+1 != MAZE_WIDTH-1):
-		if(mazeArray[X+1][Y] == true && mazeArray[X+2][Y]):
+		if(mazeArray[X+1][Y] && mazeArray[X+2][Y]):
 			Return = true
 	return Return
 
+
 func tileHasSpace(x,y,direction):
-	var Return = true
+	var Return = false
 	match direction:
 		1:
-			pass
-	if(mazeArray[x-1][y]):
-		Return = false
-	if(mazeArray[x+1][y]):
-		Return = false
-	if(mazeArray[x][y-1]):
-		Return = false
-	if(mazeArray[x][y+1]):
-		Return = false
+			if(mazeArray[x][y] && mazeArray[x][y-1]):
+				if(mazeArray[x+1][y] && mazeArray[x-1][y]):
+					Return = true
+		2:
+			if(mazeArray[x][y] && mazeArray[x][y+1]):
+				if(mazeArray[x+1][y] && mazeArray[x-1][y]):
+					Return = true
+		3:
+			if(mazeArray[x][y+1] && mazeArray[x][y-1]):
+				if(mazeArray[x][y] && mazeArray[x-1][y]):
+					Return = true
+		4:
+			if(mazeArray[x][y+1] && mazeArray[x][y-1]):
+				if(mazeArray[x+1][y] && mazeArray[x][y]):
+					Return = true
+	#if(direction != 2):
+		#if(mazeArray[x][y] && mazeArray[x][y+1]):
+			#Return = true
+	#if(direction != 3):
+		#if(mazeArray[x][y] && mazeArray[x-1][y]):
+			#Return = true
+	#if(direction != 4):
+		#if(mazeArray[x][y] && mazeArray[x+1][y]):
+			#Return = true
 	return Return
 
