@@ -2,7 +2,8 @@ extends Node2D
 
 
 func _ready():
-	pass
+	for players in get_tree().get_nodes_in_group("player"):
+		players.movemode = "platformer"
 
 
 func _process(_delta):
