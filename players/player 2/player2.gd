@@ -21,7 +21,7 @@ func _physics_process(_delta):
 		var direction = Input.get_axis("left2","right2")
 		velocity.x = SPEED * direction * 1.5
 		if(is_on_floor()):
-			if Input.is_action_just_pressed("up1"):
+			if Input.is_action_just_pressed("up2"):
 				velocity.y -= 1000
 		else:
 			velocity.y += 100
