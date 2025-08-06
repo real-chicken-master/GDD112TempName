@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://djvanbdp8c7no"]
 
 [ext_resource type="Script" path="res://players/player 2/player2.gd" id="1_q82fh"]
-[ext_resource type="Texture2D" uid="uid://bcn4bmdihu545" path="res://Texture and Mesh/lowquality-20250801__1_-removebg-preview.png" id="2_5jfry"]
+[ext_resource type="Texture2D" uid="uid://oy8a2hwomk6j" path="res://Texture and Mesh/Screenshot_2025-08-01_144913-removebg-preview.png" id="2_v4vbq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2kqkd"]
-radius = 45.0
+radius = 47.0
 
 [node name="player2" type="CharacterBody2D" groups=["player", "player2"]]
 z_index = 1
@@ -13,11 +13,11 @@ script = ExtResource("1_q82fh")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 1)
-shape = SubResource("CircleShape2D_2kqkd")
-
 [node name="Lowquality-202508011-removebg-preview" type="Sprite2D" parent="."]
-position = Vector2(-4, -2)
-scale = Vector2(0.53629, 0.335887)
-texture = ExtResource("2_5jfry")
+position = Vector2(-0.500001, 0.999997)
+scale = Vector2(0.616936, 0.374622)
+texture = ExtResource("2_v4vbq")
+region_rect = Rect2(56.5527, 50, 157.447, 237)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_2kqkd")

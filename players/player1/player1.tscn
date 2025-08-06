@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://nx4ggy1h8ovm"]
 
 [ext_resource type="Script" path="res://players/player1/player1.gd" id="1_b3iya"]
-[ext_resource type="Texture2D" uid="uid://yo3cuw6rp0jp" path="res://Texture and Mesh/lowquality-20250801-removebg-preview.png" id="2_io1lt"]
+[ext_resource type="Texture2D" uid="uid://baqq4u5ghkbd2" path="res://Texture and Mesh/Screenshot_2025-08-01_144907-removebg-preview.png" id="2_dqxs7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8m3wl"]
-radius = 45.0
+radius = 47.0
 
 [node name="player1" type="CharacterBody2D" groups=["player", "player1"]]
 z_index = 1
@@ -15,10 +15,11 @@ script = ExtResource("1_b3iya")
 position = Vector2(1, 0)
 
 [node name="Lowquality-20250801-removebg-preview" type="Sprite2D" parent="."]
-position = Vector2(-6, -5)
-scale = Vector2(0.579137, 0.362121)
-texture = ExtResource("2_io1lt")
+position = Vector2(-3, 5.45617e-06)
+scale = Vector2(0.604317, 0.357576)
+texture = ExtResource("2_dqxs7")
+region_rect = Rect2(71.6043, 46.466, 155.507, 258.932)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -4)
 shape = SubResource("CircleShape2D_8m3wl")
+debug_color = Color(0, 0.584314, 0.788235, 0.419608)
