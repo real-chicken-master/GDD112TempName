@@ -1,6 +1,6 @@
 extends Node2D
 
-var bullets = 
+#var bullets = 
 
 
 func _ready():
