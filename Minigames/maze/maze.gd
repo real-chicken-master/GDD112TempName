@@ -24,23 +24,27 @@ func _ready():
 					1:
 						if(Y-1 != 0):
 							if(mazeArray[X][Y-1] == true && mazeArray[X][Y-2]):
-								Y -= 1
-								moved = true
+								if(tileHasSpace(X,Y-1,direction)):
+									Y -= 1
+									moved = true
 					2:
 						if(Y+1 != MAZE_HEIGHT-1):
 							if(mazeArray[X][Y+1] == true && mazeArray[X][Y+2]):
-								Y += 1
-								moved = true
+								if(tileHasSpace(X,Y+1,direction)):
+									Y += 1
+									moved = true
 					3:
 						if(X-1 != 0):
 							if(mazeArray[X-1][Y] == true && mazeArray[X-2][Y]):
-								X -= 1
-								moved = true
+								if(tileHasSpace(X-1,Y,direction)):
+									X -= 1
+									moved = true
 					4:
 						if(X+1 != MAZE_WIDTH-1):
 							if(mazeArray[X+1][Y] == true && mazeArray[X+2][Y]):
-								X += 1
-								moved = true
+								if(tileHasSpace(X+1,Y,direction)):
+									X += 1
+									moved = true
 			mazeArray[X][Y] = false
 		mapbuilt = true
 	for numX in MAZE_WIDTH:
@@ -65,3 +69,19 @@ func canMove(X,Y):
 		if(mazeArray[X+1][Y] == true && mazeArray[X+2][Y]):
 			Return = true
 	return Return
+
+func tileHasSpace(x,y,direction):
+	var Return = true
+	match direction:
+		1:
+			pass
+	if(mazeArray[x-1][y]):
+		Return = false
+	if(mazeArray[x+1][y]):
+		Return = false
+	if(mazeArray[x][y-1]):
+		Return = false
+	if(mazeArray[x][y+1]):
+		Return = false
+	return Return
+
