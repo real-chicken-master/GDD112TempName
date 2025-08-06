@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://caehaixig1qq1"]
+[gd_scene load_steps=6 format=3 uid="uid://caehaixig1qq1"]
 
 [ext_resource type="Script" path="res://Minigames/bullet hell/bullet_hell.gd" id="1_4bkeb"]
 [ext_resource type="Texture2D" uid="uid://dlcunnpr6ualn" path="res://Texture and Mesh/ArcadeWall.png" id="2_vyarn"]
+[ext_resource type="PackedScene" uid="uid://bh4t7xil7xps7" path="res://Minigames/bullet hell/bullet.tscn" id="3_ml0v8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sojit"]
 texture = ExtResource("2_vyarn")
@@ -980,10 +981,6 @@ tile_set = SubResource("TileSet_v7pnu")
 format = 2
 layer_0/tile_data = PackedInt32Array(-131070, 0, 0, -65534, 0, 0, 2, 0, 0, 65538, 0, 0, 65537, 0, 0, 65536, 0, 0, 131071, 0, 0, 131070, 0, 0, 131069, 0, 0, 65533, 0, 0, -3, 0, 0, -65539, 0, 0, -65538, 0, 0, -65537, 0, 0, -131072, 0, 0, -131071, 0, 0)
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.51, 0.51)
-metadata/_edit_lock_ = true
-
 [node name="Bullet Spawns" type="Node2D" parent="."]
 
 [node name="Bullet Spawn 1" type="Marker2D" parent="Bullet Spawns"]
@@ -997,3 +994,5 @@ position = Vector2(1608, 0)
 
 [node name="Bullet Spawn 4" type="Marker2D" parent="Bullet Spawns"]
 position = Vector2(0, 1058)
+
+[node name="Bullet" parent="." instance=ExtResource("3_ml0v8")]
