@@ -75,20 +75,16 @@ func tileHasSpace(x,y,direction):
 	var Return = true
 	match direction:
 		1:
-			if(maze_array[x][y]):
-				if!(maze_array[x][y-1] && maze_array[x-1][y] && maze_array[x+1][y]):
-					Return = false
+			if!(maze_array[x][y-1] && maze_array[x-1][y] && maze_array[x+1][y]):
+				Return = false
 		2:
-			if(maze_array[x][y]):
-				if!(maze_array[x][y+1] && maze_array[x-1][y] && maze_array[x+1][y]):
-					Return = false
+			if!(maze_array[x][y+1] && maze_array[x-1][y] && maze_array[x+1][y]):
+				Return = false
 		3:
-			if(maze_array[x][y]):
-				if!(maze_array[x][y-1] && maze_array[x][y+1] && maze_array[x-1][y]):
-					Return = false
+			if!(maze_array[x][y-1] && maze_array[x][y+1] && maze_array[x-1][y]):
+				Return = false
 		4:
-			if(maze_array[x][y]):
-				if!(maze_array[x][y-1] && maze_array[x+1][y] && maze_array[x][y+1]):
-					Return = false
+			if!(maze_array[x][y-1] && maze_array[x+1][y] && maze_array[x][y+1]):
+				Return = false
 	return Return
 
