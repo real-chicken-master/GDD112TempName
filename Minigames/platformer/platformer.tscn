@@ -1,7 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://q7nneddn7er0"]
+[gd_scene load_steps=7 format=3 uid="uid://q7nneddn7er0"]
 
 [ext_resource type="Texture2D" uid="uid://d35k7uy35vj6h" path="res://Texture and Mesh/Platform.png" id="1_kjxtr"]
-[ext_resource type="Texture2D" uid="uid://deosc17d6lr88" path="res://Texture and Mesh/SPIKEFinal.png" id="2_7st44"]
 [ext_resource type="PackedScene" uid="uid://bp5nfx815koha" path="res://Minigames/platformer/spikereal.tscn" id="4_3rbv8"]
 [ext_resource type="Texture2D" uid="uid://byiugkx1n1ikj" path="res://Texture and Mesh/halfplatofro.png" id="4_mxyb4"]
 
@@ -731,16 +730,6 @@ texture_region_size = Vector2i(200, 200)
 11:11/0/physics_layer_1/linear_velocity = Vector2(0, 0)
 11:11/0/physics_layer_1/angular_velocity = 0.0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jln4n"]
-texture = ExtResource("2_7st44")
-texture_region_size = Vector2i(200, 200)
-0:0/0 = 0
-0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_0/angular_velocity = 0.0
-0:0/0/physics_layer_1/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_1/angular_velocity = 0.0
-0:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-10, 1, -9, 0, 43.8406, 100, -52.3259, 100)
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yoncd"]
 resource_name = "halftile"
 texture = ExtResource("4_mxyb4")
@@ -757,7 +746,6 @@ tile_size = Vector2i(200, 200)
 physics_layer_0/collision_layer = 4
 physics_layer_1/collision_layer = 8
 sources/0 = SubResource("TileSetAtlasSource_iowm3")
-sources/1 = SubResource("TileSetAtlasSource_jln4n")
 sources/3 = SubResource("TileSetAtlasSource_yoncd")
 
 [node name="platformer" type="Node2D"]
@@ -791,6 +779,10 @@ position = Vector2(-496, -97)
 [node name="spikereal8" parent="spikybox" instance=ExtResource("4_3rbv8")]
 position = Vector2(-1488, -425)
 scale = Vector2(1, 0.400001)
+
+[node name="spikereal9" parent="spikybox" instance=ExtResource("4_3rbv8")]
+position = Vector2(-2083, -736)
+scale = Vector2(1, 0.360001)
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(3, 0)
