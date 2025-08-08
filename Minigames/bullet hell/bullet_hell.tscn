@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://caehaixig1qq1"]
+[gd_scene load_steps=5 format=3 uid="uid://caehaixig1qq1"]
 
 [ext_resource type="Script" path="res://Minigames/bullet hell/bullet_hell.gd" id="1_4bkeb"]
 [ext_resource type="Texture2D" uid="uid://cyf1bwyfkocfq" path="res://Texture and Mesh/ArcadeWall.png" id="2_vyarn"]
-[ext_resource type="PackedScene" uid="uid://bh4t7xil7xps7" path="res://Minigames/bullet hell/bullet.tscn" id="3_ml0v8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sojit"]
 texture = ExtResource("2_vyarn")
@@ -996,5 +995,3 @@ position = Vector2(1608, 0)
 
 [node name="Bullet Spawn 4" type="Marker2D" parent="Bullet Spawns"]
 position = Vector2(0, 1058)
-
-[node name="Bullet" parent="." instance=ExtResource("3_ml0v8")]
