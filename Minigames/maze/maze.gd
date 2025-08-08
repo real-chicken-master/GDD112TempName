@@ -3,16 +3,16 @@ extends Node2D
 var maze_array: Array[Array] = [] # true is collison false is no collision
 const MAZE_WIDTH = 32
 const MAZE_HEIGHT = 32
-var mapbuilt = false
+var map_built = false
 
 func _ready():
 	for camera in get_tree().get_nodes_in_group("camera"):
 		camera.zoom = Vector2(0.6,0.6)
-	for numX in MAZE_WIDTH:
+	for num_x in MAZE_WIDTH:
 		maze_array.append([])
-		for numY in MAZE_HEIGHT:
-			maze_array[numX].append(true)
-	while(!mapbuilt):
+		for num_y in MAZE_HEIGHT:
+			maze_array[num_x].append(true)
+	while(!map_built):
 		var X = 1
 		var Y = 1
 		maze_array[1][1] = false
@@ -24,37 +24,37 @@ func _ready():
 					1:
 						if(Y-1 != 0):
 							if(maze_array[X][Y-1] && maze_array[X][Y-2]):
-								if(tileHasSpace(X,Y-1,direction)):
+								if(tile_has_space(X,Y-1,direction)):
 									Y -= 1
 									moved = true
 					2:
 						if(Y+1 != MAZE_HEIGHT-1):
 							if(maze_array[X][Y+1] && maze_array[X][Y+2]):
-								if(tileHasSpace(X,Y+1,direction)):
+								if(tile_has_space(X,Y+1,direction)):
 									Y += 1
 									moved = true
 					3:
 						if(X-1 != 0):
 							if(maze_array[X-1][Y] && maze_array[X-2][Y]):
-								if(tileHasSpace(X-1,Y,direction)):
+								if(tile_has_space(X-1,Y,direction)):
 									X -= 1
 									moved = true
 					4:
 						if(X+1 != MAZE_WIDTH-1):
 							if(maze_array[X+1][Y] && maze_array[X+2][Y]):
-								if(tileHasSpace(X+1,Y,direction)):
+								if(tile_has_space(X+1,Y,direction)):
 									X += 1
 									moved = true
 			maze_array[X][Y] = false
-		mapbuilt = true
-	for numX in MAZE_WIDTH:
-		for numY in MAZE_HEIGHT:
-			if maze_array[numX][numY]:
-				$TileMap.set_cell(0,Vector2(numX,numY),0,Vector2(0,0))
+		map_built = true
+	for num_x in MAZE_WIDTH:
+		for num_y in MAZE_HEIGHT:
+			if maze_array[num_x][num_y]:
+				$TileMap.set_cell(0,Vector2(num_x,num_y),0,Vector2(0,0))
 			else:
-				$TileMap.set_cell(0,Vector2(numX,numY),2,Vector2(0,0))
+				$TileMap.set_cell(0,Vector2(num_x,num_y),2,Vector2(0,0))
 
-func canMove(X,Y):
+func can_move(X,Y):
 	var Return = false
 	if(Y-1 != 0):
 		if(maze_array[X][Y-1] && maze_array[X][Y-2]):
@@ -71,7 +71,7 @@ func canMove(X,Y):
 	return Return
 
 
-func tileHasSpace(x,y,direction):
+func tile_has_space(x,y,direction):
 	var Return = true
 	match direction:
 		1:
