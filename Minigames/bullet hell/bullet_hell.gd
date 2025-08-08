@@ -11,4 +11,8 @@ func _ready():
 	print(bullet)
 
 func _process(_delta):
-	pass
+	var spawnpos = $"Bullet Spawns".get_child(randi()%$"Bullet Spawns".get_child_count()).global_position
+	var bullet = bullets.instantiate()
+	bullet.global_position = spawnpos
+	$projectiles.add_child(bullet)
+	print(bullet)
