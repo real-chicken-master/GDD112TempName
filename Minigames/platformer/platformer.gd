@@ -13,3 +13,8 @@ func _process(_delta):
 
 func _on_body_entered(body):
 	print (body)
+
+
+
+
+#each time a spike is entered by a player a point is gained, who ever gets to the end with the least points wins.
