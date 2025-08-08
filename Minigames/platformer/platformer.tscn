@@ -784,9 +784,30 @@ scale = Vector2(1, 0.400001)
 position = Vector2(-2083, -736)
 scale = Vector2(1, 0.360001)
 
+[node name="spikereal10" parent="spikybox" instance=ExtResource("4_3rbv8")]
+position = Vector2(-1686, -1100)
+
+[node name="spikereal11" parent="spikybox" instance=ExtResource("4_3rbv8")]
+position = Vector2(-1286.24, -1084.23)
+
+[node name="spikereal12" parent="spikybox" instance=ExtResource("4_3rbv8")]
+position = Vector2(-1490, -1104)
+
+[node name="spikereal13" parent="spikybox" instance=ExtResource("4_3rbv8")]
+position = Vector2(-2083, -1903)
+
+[node name="spikereal14" parent="spikybox" instance=ExtResource("4_3rbv8")]
+position = Vector2(-1090, -1100)
+
+[node name="spikereal15" parent="spikybox" instance=ExtResource("4_3rbv8")]
+position = Vector2(-2083, -1401)
+
+[node name="spikereal16" parent="spikybox" instance=ExtResource("4_3rbv8")]
+position = Vector2(-1688, -1695)
+
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(3, 0)
 scale = Vector2(0.993411, 1)
 tile_set = SubResource("TileSet_ncqxv")
 format = 2
-layer_0/tile_data = PackedInt32Array(65534, 0, 0, 65535, 0, 0, 0, 0, 0, 1, 0, 0, 3, 0, 0, 65533, 0, 0, 65532, 0, 0, 65531, 0, 0, 65530, 0, 0, 65529, 0, 0, -6, 0, 0, -7, 0, 0, -196613, 0, 0, -65544, 0, 0, 2, 0, 0, -196612, 0, 0, -196611, 0, 0, -65545, 0, 0, -262153, 0, 0, -262152, 0, 0, -262151, 0, 0, -262150, 0, 0, -196614, 0, 0, -65547, 0, 0, -65546, 0, 0, -131083, 0, 0, -196619, 3, 0)
+layer_0/tile_data = PackedInt32Array(65534, 0, 0, 65535, 0, 0, 0, 0, 0, 1, 0, 0, 3, 0, 0, 65533, 0, 0, 65532, 0, 0, 65531, 0, 0, 65530, 0, 0, 65529, 0, 0, -6, 0, 0, -7, 0, 0, -196613, 0, 0, -65544, 0, 0, 2, 0, 0, -196612, 0, 0, -196611, 0, 0, -65545, 0, 0, -262153, 0, 0, -262152, 0, 0, -262151, 0, 0, -262150, 0, 0, -196614, 0, 0, -65547, 0, 0, -65546, 0, 0, -131083, 0, 0, -196619, 3, 0, -327691, 0, 0, -393227, 3, 0, -524299, 0, 0, -458761, 0, 0)
