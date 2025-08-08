@@ -30,7 +30,6 @@ func _ready():
 					if(can_make_path(num_x,num_y)):
 						paths_built += 1
 						create_path(num_x,num_y)
-			print("test")
 			if(paths_built == 0):
 				paths_possible = false
 		map_built = true
@@ -44,6 +43,8 @@ func _ready():
 
 func can_make_path(x,y):
 	var Return = false
+	if(x > 0):
+		pass
 	return Return
 
 func create_path(x,y):
@@ -58,25 +59,25 @@ func create_path(x,y):
 				#check if the path can go that direction
 				match direction:
 					1:#up
-						if(y-1 != 0):
+						if(y-1 > 0):
 							if(maze_array[x][y-1] && maze_array[x][y-2]):
 								if(tile_has_space(x,y-1,direction)):
 									y -= 1
 									moved = true
 					2:#down
-						if(y+1 != MAZE_HEIGHT-1):
+						if(y+1 < MAZE_HEIGHT-1):
 							if(maze_array[x][y+1] && maze_array[x][y+2]):
 								if(tile_has_space(x,y+1,direction)):
 									y += 1
 									moved = true
 					3:#left
-						if(x-1 != 0):
+						if(x-1 > 0):
 							if(maze_array[x-1][y] && maze_array[x-2][y]):
 								if(tile_has_space(x-1,y,direction)):
 									x -= 1
 									moved = true
 					4:#right
-						if(x+1 != MAZE_WIDTH-1):
+						if(x+1 < MAZE_WIDTH-1):
 							if(maze_array[x+1][y] && maze_array[x+2][y]):
 								if(tile_has_space(x+1,y,direction)):
 									x += 1
@@ -87,16 +88,16 @@ func create_path(x,y):
 
 func can_move(x,y,):
 	var Return = false
-	if(y-1 != 0):
+	if(y-1 > 0):
 		if(tile_has_space(x,y-1,1)):
 			Return = true
-	if(y+1 != MAZE_HEIGHT-1):
+	if(y+1 < MAZE_HEIGHT-1):
 		if(tile_has_space(x,y+1,2)):
 			Return = true
-	if(x-1 != 0):
+	if(x-1 > 0):
 		if(tile_has_space(x-1,y,3)):
 			Return = true
-	if(x+1 != MAZE_WIDTH-1):
+	if(x+1 < MAZE_WIDTH-1):
 		if(tile_has_space(x+1,y,4)):
 			Return = true
 	return Return
@@ -106,19 +107,19 @@ func tile_has_space(x,y,direction):
 	var Return = true
 	match direction:
 		1:#up
-			if(y-1 != 0 && x+1 != MAZE_WIDTH-1 && x-1 != 0):
+			if(y-1 > 0 && x+1 < MAZE_WIDTH-1 && x-1 > 0):
 				if!(maze_array[x][y-1] && maze_array[x-1][y] && maze_array[x+1][y]):
 					Return = false
 		2:#down
-			if(y+1 != MAZE_HEIGHT-1 && x+1 != MAZE_WIDTH-1 && x-1 != 0):
+			if(y+1 < MAZE_HEIGHT-1 && x+1 < MAZE_WIDTH-1 && x-1 > 0):
 				if!(maze_array[x][y+1] && maze_array[x-1][y] && maze_array[x+1][y]):
 					Return = false
 		3:#left
-			if(y+1 != MAZE_HEIGHT-1 && y+1 != MAZE_HEIGHT-1 && x-1 != 0):
+			if(y+1 < MAZE_HEIGHT-1 && y+1 < MAZE_HEIGHT-1 && x-1 > 0):
 				if!(maze_array[x][y-1] && maze_array[x][y+1] && maze_array[x-1][y]):
 					Return = false
 		4:#right
-			if(y+1 != MAZE_HEIGHT-1 && y+1 != MAZE_HEIGHT-1 && x+1 != MAZE_WIDTH-1):
+			if(y+1 < MAZE_HEIGHT-1 && y+1 < MAZE_HEIGHT-1 && x+1 < MAZE_WIDTH-1):
 				if!(maze_array[x][y-1] && maze_array[x+1][y] && maze_array[x][y+1]):
 					Return = false
 	return Return
