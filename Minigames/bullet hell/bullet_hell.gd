@@ -16,3 +16,4 @@ func _process(_delta):
 	bullet.global_position = spawnpos
 	$projectiles.add_child(bullet)
 	print(bullet)
+	pass
