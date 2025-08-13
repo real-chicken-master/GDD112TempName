@@ -51,15 +51,15 @@ func can_make_path(x,y):
 	return Return
 
 func create_path(x,y):
-	print("test")
 	#while can move is true
-	while(can_move(x,y)):
+	while(can_move(x,y) && (tiles_attempted < 100)):
 		#set moved to false
 		var moved = false
 		#until the path has been moved
-		while (!moved && tiles_attempted < 100):
+		while ((!moved) && (tiles_attempted < 100)):
+			if(tiles_attempted > 100):
+				print(tiles_attempted)
 			tiles_attempted += 1
-			print(tiles_attempted)
 			#get a random direction
 			var direction = randi_range(1,4)
 			#check if the path can go that direction
@@ -98,7 +98,8 @@ func create_path(x,y):
 								moved = true
 		#set that tile to path
 		maze_array[x][y] = false
-		tiles_attempted = 0
+		if(tiles_attempted < 100):
+			tiles_attempted = 0
 		
 
 func can_move(x,y):
@@ -127,27 +128,27 @@ func can_move(x,y):
 
 
 func tile_has_space(x,y,direction):
-	var Return = true
+	var Return = false
 	match direction:
 		1:#up
 			#boundary
 			if(y-1 > 0 && x+1 < MAZE_WIDTH-1 && x-1 > 0):
-				if!(maze_array[x][y-1] && maze_array[x-1][y] && maze_array[x+1][y]):
-					Return = false
+				if(maze_array[x][y-1] && maze_array[x-1][y] && maze_array[x+1][y]):
+					Return = true
 		2:#down
 			#boundary
 			if(y+1 < MAZE_HEIGHT-1 && x+1 < MAZE_WIDTH-1 && x-1 > 0):
-				if!(maze_array[x][y+1] && maze_array[x-1][y] && maze_array[x+1][y]):
-					Return = false
+				if(maze_array[x][y+1] && maze_array[x-1][y] && maze_array[x+1][y]):
+					Return = true
 		3:#left
 			#boundary
 			if(y+1 < MAZE_HEIGHT-1 && y+1 < MAZE_HEIGHT-1 && x-1 > 0):
-				if!(maze_array[x][y-1] && maze_array[x][y+1] && maze_array[x-1][y]):
-					Return = false
+				if(maze_array[x][y-1] && maze_array[x][y+1] && maze_array[x-1][y]):
+					Return = true
 		4:#right
 			#boundary
 			if(y+1 < MAZE_HEIGHT-1 && y+1 < MAZE_HEIGHT-1 && x+1 < MAZE_WIDTH-1):
-				if!(maze_array[x][y-1] && maze_array[x+1][y] && maze_array[x][y+1]):
-					Return = false
+				if(maze_array[x][y-1] && maze_array[x+1][y] && maze_array[x][y+1]):
+					Return = true
 	return Return
 
