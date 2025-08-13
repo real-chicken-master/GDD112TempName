@@ -24,4 +24,4 @@ func _on_despawntimer_timeout():
 
 
 func hit():
-	
+	pass

@@ -4,7 +4,7 @@ var maze_array: Array[Array] = [] # true is collison false is no collision
 const MAZE_WIDTH = 32
 const MAZE_HEIGHT = 32
 var map_built = false
-
+var start_pos = Vector2(379,312)
 var tiles_attempted = 0
 
 #when the level is loaded
@@ -12,6 +12,11 @@ func _ready():
 	#set camera zoom for players
 	for camera in get_tree().get_nodes_in_group("camera"):
 		camera.zoom = Vector2(0.6,0.6)
+	#turn on the player lights
+	for lights in get_tree().get_nodes_in_group("player_light"):
+		lights.energy = 1
+	for players in get_tree().get_nodes_in_group("player"):
+		players.global_position = start_pos
 	#setup maze array
 	for num_x in MAZE_WIDTH:
 		maze_array.append([])
