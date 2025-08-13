@@ -5,6 +5,8 @@ const MAZE_WIDTH = 32
 const MAZE_HEIGHT = 32
 var map_built = false
 
+var tiles_attempted = 0
+
 #when the level is loaded
 func _ready():
 	#set camera zoom for players
@@ -16,7 +18,7 @@ func _ready():
 		for num_y in MAZE_HEIGHT:
 			maze_array[num_x].append(true)
 	#build maze
-	while(!map_built):
+	while((!map_built) or tiles_attempted < 100):
 		#set the starting tile in the array
 		maze_array[1][1] = false
 		#this variable will be changed when no more paths are possible
@@ -48,43 +50,46 @@ func can_make_path(x,y):
 	return Return
 
 func create_path(x,y):
+	print("test")
 	#while can move is true
-		while(can_move(x,y)):
-			#set moved to false
-			var moved = false
-			#until the path has been moved
-			while (!moved):
-				#get a random direction
-				var direction = randi_range(1,4)
-				#check if the path can go that direction
-				match direction:
-					1:#up
-						if(y-1 > 0):
-							if(maze_array[x][y-1] && maze_array[x][y-2]):
-								if(tile_has_space(x,y-1,direction)):
-									y -= 1
-									moved = true
-					2:#down
-						if(y+1 < MAZE_HEIGHT-1):
-							if(maze_array[x][y+1] && maze_array[x][y+2]):
-								if(tile_has_space(x,y+1,direction)):
-									y += 1
-									moved = true
-					3:#left
-						if(x-1 > 0):
-							if(maze_array[x-1][y] && maze_array[x-2][y]):
-								if(tile_has_space(x-1,y,direction)):
-									x -= 1
-									moved = true
-					4:#right
-						if(x+1 < MAZE_WIDTH-1):
-							if(maze_array[x+1][y] && maze_array[x+2][y]):
-								if(tile_has_space(x+1,y,direction)):
-									x += 1
-									moved = true
-			#set that tile to path
-			maze_array[x][y] = false
-		#when the tile cant be moved anymore set map built to true and end the loop
+	while(can_move(x,y)):
+		tiles_attempted += 1
+		print(tiles_attempted)
+		#set moved to false
+		var moved = false
+		#until the path has been moved
+		while (!moved):
+			#get a random direction
+			var direction = randi_range(1,4)
+			#check if the path can go that direction
+			match direction:
+				1:#up
+					if(y-1 > 0):
+						if(maze_array[x][y-1] && maze_array[x][y-2]):
+							if(tile_has_space(x,y-1,direction)):
+								y -= 1
+								moved = true
+				2:#down
+					if(y+1 < MAZE_HEIGHT-1):
+						if(maze_array[x][y+1] && maze_array[x][y+2]):
+							if(tile_has_space(x,y+1,direction)):
+								y += 1
+								moved = true
+				3:#left
+					if(x-1 > 0):
+						if(maze_array[x-1][y] && maze_array[x-2][y]):
+							if(tile_has_space(x-1,y,direction)):
+								x -= 1
+								moved = true	
+				4:#right
+					if(x+1 < MAZE_WIDTH-1):
+						if(maze_array[x+1][y] && maze_array[x+2][y]):
+							if(tile_has_space(x+1,y,direction)):
+								x += 1
+								moved = true
+		#set that tile to path
+		maze_array[x][y] = false
+	#when the tile cant be moved anymore set map built to true and end the loop
 
 func can_move(x,y,):
 	var Return = false
