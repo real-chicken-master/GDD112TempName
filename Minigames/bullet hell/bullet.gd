@@ -13,10 +13,15 @@ func _ready():
 func _process(delta):
 	var direction = (target_pos - global_position).normalized()
 	global_position += direction * speed * delta
-	for body in get_overlapping_areas():
-		if (body.name == "player1" || "player2"):
-			print("hit")
+	for body in get_overlapping_bodies():
+		if (body.name == "res://players/player1/player1.tscn" || "res://players/player 2/player2.tscn"):
+			hit()
+			queue_free()
 
 
 func _on_despawntimer_timeout():
 	queue_free()
+
+
+func hit():
+	
