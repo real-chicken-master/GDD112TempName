@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://d4eduyht5d65x"]
+[gd_scene load_steps=7 format=3 uid="uid://d4eduyht5d65x"]
 
 [ext_resource type="PackedScene" uid="uid://nx4ggy1h8ovm" path="res://players/player1/player1.tscn" id="1_slcjd"]
 [ext_resource type="PackedScene" uid="uid://djvanbdp8c7no" path="res://players/player 2/player2.tscn" id="2_5bn30"]
 [ext_resource type="PackedScene" uid="uid://ox6eyudg8jub" path="res://UI/level_switcher.tscn" id="2_wf0tu"]
+[ext_resource type="Texture2D" uid="uid://cly2e0vapmkmu" path="res://Texture and Mesh/light_Texture.png" id="4_gnyr1"]
 
 [sub_resource type="GDScript" id="GDScript_3ulip"]
 script/source = "extends SubViewport
@@ -53,7 +54,7 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="HBoxContainer/SubViewportContainer"]
 handle_input_locally = false
-size = Vector2i(2, 2)
+size = Vector2i(574, 648)
 render_target_update_mode = 4
 script = SubResource("GDScript_3ulip")
 
@@ -73,7 +74,7 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="HBoxContainer/SubViewportContainer2"]
 handle_input_locally = false
-size = Vector2i(2, 2)
+size = Vector2i(574, 648)
 render_target_update_mode = 4
 script = SubResource("GDScript_eexgl")
 
@@ -82,3 +83,9 @@ position_smoothing_enabled = true
 
 [node name="player2" parent="HBoxContainer/SubViewportContainer2/SubViewport" instance=ExtResource("2_5bn30")]
 position = Vector2(300, 50)
+
+[node name="PointLight2D2" type="PointLight2D" parent="HBoxContainer/SubViewportContainer2/SubViewport/player2" groups=["player_light"]]
+z_index = 1
+position = Vector2(-300, -50)
+texture = ExtResource("4_gnyr1")
+texture_scale = 5.0
