@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://nx4ggy1h8ovm"]
 
 [ext_resource type="Script" path="res://players/player1/player1.gd" id="1_b3iya"]
-[ext_resource type="Texture2D" uid="uid://bggyuyknbmxir" path="res://Texture and Mesh/Screenshot_2025-08-01_144907-removebg-preview.png" id="2_dqxs7"]
-[ext_resource type="Texture2D" uid="uid://pvkss1m1llni" path="res://Texture and Mesh/light_Texture.png" id="3_lnqen"]
+[ext_resource type="Texture2D" uid="uid://curh6uy16nkym" path="res://Texture and Mesh/Screenshot_2025-08-01_144907-removebg-preview.png" id="2_dqxs7"]
+[ext_resource type="Texture2D" uid="uid://cly2e0vapmkmu" path="res://Texture and Mesh/light_Texture.png" id="3_lnqen"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8m3wl"]
 radius = 47.0
