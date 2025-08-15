@@ -14,7 +14,6 @@ func _ready():
 
 
 
-
 "
 
 [sub_resource type="GDScript" id="GDScript_eexgl"]
@@ -53,7 +52,7 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="HBoxContainer/SubViewportContainer"]
 handle_input_locally = false
-size = Vector2i(2, 2)
+size = Vector2i(574, 648)
 render_target_update_mode = 4
 script = SubResource("GDScript_3ulip")
 
@@ -66,6 +65,10 @@ position = Vector2(100, 50)
 
 [node name="level switcher" parent="HBoxContainer/SubViewportContainer/SubViewport" instance=ExtResource("2_wf0tu")]
 
+[node name="hitcounterp1" type="Label" parent="HBoxContainer/SubViewportContainer" groups=["p1hitcounter"]]
+layout_mode = 2
+text = "test1"
+
 [node name="SubViewportContainer2" type="SubViewportContainer" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -73,7 +76,7 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="HBoxContainer/SubViewportContainer2"]
 handle_input_locally = false
-size = Vector2i(2, 2)
+size = Vector2i(574, 648)
 render_target_update_mode = 4
 script = SubResource("GDScript_eexgl")
 
@@ -82,3 +85,7 @@ position_smoothing_enabled = true
 
 [node name="player2" parent="HBoxContainer/SubViewportContainer2/SubViewport" instance=ExtResource("2_5bn30")]
 position = Vector2(300, 50)
+
+[node name="hitcounterp2" type="Label" parent="HBoxContainer/SubViewportContainer2" groups=["p2hitcounter"]]
+layout_mode = 2
+text = "test2"
