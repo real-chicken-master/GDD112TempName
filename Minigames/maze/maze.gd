@@ -30,6 +30,9 @@ func _ready():
 		var paths_possible = true
 		#build all paths
 		finish = create_path(1,1)
+		$finish_area.global_position = finish*(100*$TileMap.scale.x)
+		$finish_area.global_position += Vector2((50*$TileMap.scale.x),(50*$TileMap.scale.x)) 
+		print($finish_area.global_position)
 		while(paths_possible):
 			var paths_built = 0
 			for num_x in MAZE_WIDTH:
@@ -164,3 +167,7 @@ func _on_tree_exiting():
 	for players in get_tree().get_nodes_in_group("player"):
 		pass
 		#players.remove_child()
+
+
+func _on_finish_area_body_entered(body):
+	Globals.change_scene(preload("res://lobby/main_lobby.tscn").instantiate())
