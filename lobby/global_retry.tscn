@@ -34,6 +34,7 @@ offset_right = 66.5
 offset_bottom = 15.5
 grow_horizontal = 2
 grow_vertical = 2
+action_mode = 0
 text = "Retry Bullet Hell"
 script = ExtResource("1_by566")
 
@@ -48,6 +49,7 @@ offset_top = -4.0
 offset_right = 8.0
 offset_bottom = 4.0
 grow_vertical = 2
+action_mode = 0
 text = "Retry Platformer"
 script = ExtResource("2_y8ue4")
 
@@ -63,5 +65,10 @@ offset_top = -4.0
 offset_bottom = 4.0
 grow_horizontal = 0
 grow_vertical = 2
+action_mode = 0
 text = "Retry Maze"
 script = ExtResource("3_s2gwp")
+
+[connection signal="pressed" from="Bullet Hell Retry" to="Bullet Hell Retry" method="_on_pressed"]
+[connection signal="pressed" from="Platformer Retry" to="Platformer Retry" method="_on_pressed"]
+[connection signal="pressed" from="Maze Retry" to="Maze Retry" method="_on_pressed"]
