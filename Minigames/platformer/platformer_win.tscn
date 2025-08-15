@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dkule581imv8a"]
+
+[ext_resource type="Script" path="res://Minigames/platformer/platformer_win.gd" id="1_pqgap"]
+[ext_resource type="Texture2D" uid="uid://ca6pad8mp3cgq" path="res://Texture and Mesh/light_Texture.png" id="1_uv5kb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ety17"]
+radius = 68.0294
+
+[node name="platformer_win" type="Area2D"]
+script = ExtResource("1_pqgap")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_uv5kb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ety17")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,14 +1,14 @@
 extends Node
 
-var player1hit = 0:
+var player_1_hit = 0:
 	set(timesHit):
-		player1hit = timesHit
+		player_1_hit = timesHit
 		get_tree().get_first_node_in_group("p1hitcounter").text = str(timesHit)
 
-var player2hit = 0:
+var player_2_hit = 0:
 	set(timesHit2):
-		player2hit = timesHit2
-		get_tree().get_first_node_in_group("p2hitcounter").text = timesHit2
+		player_2_hit = timesHit2
+		get_tree().get_first_node_in_group("p2hitcounter").text = str(timesHit2)
 
 @onready var players = get_tree().get_nodes_in_group("player")
 
