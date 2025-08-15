@@ -6,17 +6,17 @@ const MAZE_HEIGHT = 32
 var map_built = false
 var start_pos = Vector2(379,312)
 var tiles_attempted = 0
-
+var player_light = preload("res://players/player_light.tscn")
+var finish:Vector2
 #when the level is loaded
 func _ready():
 	#set camera zoom for players
 	for camera in get_tree().get_nodes_in_group("camera"):
 		camera.zoom = Vector2(0.6,0.6)
 	#turn on the player lights
-	for lights in get_tree().get_nodes_in_group("player_light"):
-		lights.energy = 1
 	for players in get_tree().get_nodes_in_group("player"):
 		players.global_position = start_pos
+		players.add_child(player_light.instantiate())
 	#setup maze array
 	for num_x in MAZE_WIDTH:
 		maze_array.append([])
@@ -29,7 +29,7 @@ func _ready():
 		#this variable will be changed when no more paths are possible
 		var paths_possible = true
 		#build all paths
-		create_path(1,1)
+		finish = create_path(1,1)
 		while(paths_possible):
 			var paths_built = 0
 			for num_x in MAZE_WIDTH:
@@ -48,6 +48,7 @@ func _ready():
 				$TileMap.set_cell(0,Vector2(num_x,num_y),0,Vector2(0,0))
 			else:
 				$TileMap.set_cell(0,Vector2(num_x,num_y),2,Vector2(0,0))
+	$TileMap.set_cell(0,finish,1,Vector2(0,0))
 
 func can_make_path(x,y):
 	var Return = false
@@ -105,7 +106,7 @@ func create_path(x,y):
 		maze_array[x][y] = false
 		if(tiles_attempted < 100):
 			tiles_attempted = 0
-		
+	return Vector2(x,y)
 
 func can_move(x,y):
 	var Return = false
@@ -157,3 +158,9 @@ func tile_has_space(x,y,direction):
 					Return = true
 	return Return
 
+
+
+func _on_tree_exiting():
+	for players in get_tree().get_nodes_in_group("player"):
+		pass
+		#players.remove_child()

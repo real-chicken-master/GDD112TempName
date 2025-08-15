@@ -2918,3 +2918,12 @@ position = Vector2(1608, 0)
 
 [node name="Bullet Spawn 4" type="Marker2D" parent="Bullet Spawns"]
 position = Vector2(0, 1058)
+
+[node name="Easy" type="Timer" parent="."]
+wait_time = 1.5
+
+[node name="Intermediate" type="Timer" parent="."]
+wait_time = 0.7
+
+[node name="Hard" type="Timer" parent="."]
+wait_time = 0.3

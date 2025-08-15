@@ -1,11 +1,9 @@
 extends Button
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
+func _on_pressed():
+	Globals.change_scene(preload("res://Minigames/bullet hell/bullet_hell.tscn").instantiate())
+
+
+func _on_platformer_retry_pressed():
 	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
