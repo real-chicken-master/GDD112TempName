@@ -2921,19 +2921,13 @@ position = Vector2(0, 1058)
 
 [node name="Easy" type="Timer" parent="."]
 wait_time = 1.5
-autostart = true
 
 [node name="Intermediate" type="Timer" parent="."]
-wait_time = 0.3
+wait_time = 0.7
 
 [node name="Hard" type="Timer" parent="."]
-wait_time = 0.05
-
-[node name="Extreme" type="Timer" parent="."]
-wait_time = 0.001
+wait_time = 0.3
 
 [connection signal="timeout" from="Easy" to="." method="_on_easy_timeout"]
 [connection signal="timeout" from="Intermediate" to="." method="_on_intermediate_timeout"]
 [connection signal="timeout" from="Hard" to="." method="_on_hard_timeout"]
-[connection signal="timeout" from="Extreme" to="." method="_on_hard_timeout"]
-[connection signal="timeout" from="Extreme" to="." method="_on_extreme_timeout"]

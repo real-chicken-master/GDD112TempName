@@ -24,4 +24,4 @@ func _on_despawntimer_timeout():
 
 
 func hit():
-	Globals.change_scene(preload("res://lobby/main_lobby.tscn").instantiate())
+	pass
