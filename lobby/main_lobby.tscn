@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c6mx5yrnxiiqu" path="res://lobby/minigame_1.tscn" id="1_x04k7"]
 [ext_resource type="PackedScene" uid="uid://bvxji66hx528i" path="res://lobby/minigame_2.tscn" id="2_d72ml"]
 [ext_resource type="PackedScene" uid="uid://bwqor80lqgqvq" path="res://lobby/minigame_3.tscn" id="3_ufeh7"]
-[ext_resource type="Texture2D" uid="uid://beeektus3ov5q" path="res://Texture and Mesh/ArcadeWall.png" id="5_th5fa"]
+[ext_resource type="Texture2D" uid="uid://cyf1bwyfkocfq" path="res://Texture and Mesh/ArcadeWall.png" id="5_th5fa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vdirs"]
 texture = ExtResource("5_th5fa")
