@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b4my264vw45n"]
+[gd_scene load_steps=10 format=3 uid="uid://b4my264vw45n"]
 
 [ext_resource type="Script" path="res://Minigames/maze/maze.gd" id="1_d5sv8"]
 [ext_resource type="Texture2D" uid="uid://yrxqe4kb6ffh" path="res://Texture and Mesh/maze/wall.png" id="2_cjl1d"]
@@ -13,8 +13,6 @@ texture_region_size = Vector2i(100, 100)
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-50, -50, 50, -50, 50, 50, -50, 50)
-0:0/0/physics_layer_1/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_1/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8e5yc"]
 resource_name = "finish"
@@ -23,9 +21,6 @@ texture_region_size = Vector2i(100, 100)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
-0:0/0/physics_layer_1/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_1/angular_velocity = 0.0
-0:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-50, -50, 50, -50, 50, 50, -50, 50)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0p2ht"]
 resource_name = "path"
@@ -34,16 +29,16 @@ texture_region_size = Vector2i(100, 100)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
-0:0/0/physics_layer_1/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_1/angular_velocity = 0.0
 
 [sub_resource type="TileSet" id="TileSet_niln0"]
 tile_size = Vector2i(100, 100)
 physics_layer_0/collision_layer = 4
-physics_layer_1/collision_layer = 0
 sources/0 = SubResource("TileSetAtlasSource_vrrjp")
 sources/2 = SubResource("TileSetAtlasSource_0p2ht")
 sources/1 = SubResource("TileSetAtlasSource_8e5yc")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ork18"]
+size = Vector2(100, 100)
 
 [node name="maze" type="Node2D"]
 script = ExtResource("1_d5sv8")
@@ -57,4 +52,12 @@ scale = Vector2(2.475, 2.475)
 tile_set = SubResource("TileSet_niln0")
 format = 2
 
+[node name="finish_area" type="Area2D" parent="."]
+scale = Vector2(2.475, 2.475)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="finish_area"]
+shape = SubResource("RectangleShape2D_ork18")
+
 [connection signal="tree_exiting" from="." to="." method="_on_tree_exiting"]
+[connection signal="body_entered" from="finish_area" to="." method="_on_finish_area_body_entered"]
