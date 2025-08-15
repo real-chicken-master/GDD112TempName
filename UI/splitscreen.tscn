@@ -67,7 +67,7 @@ position = Vector2(100, 50)
 
 [node name="hitcounterp1" type="Label" parent="HBoxContainer/SubViewportContainer" groups=["p1hitcounter"]]
 layout_mode = 2
-text = "test1"
+text = "times hit"
 
 [node name="SubViewportContainer2" type="SubViewportContainer" parent="HBoxContainer"]
 layout_mode = 2
@@ -88,4 +88,4 @@ position = Vector2(300, 50)
 
 [node name="hitcounterp2" type="Label" parent="HBoxContainer/SubViewportContainer2" groups=["p2hitcounter"]]
 layout_mode = 2
-text = "test2"
+text = "times hit"
