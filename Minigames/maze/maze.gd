@@ -4,18 +4,19 @@ var maze_array: Array[Array] = [] # true is collison false is no collision
 const MAZE_WIDTH = 32
 const MAZE_HEIGHT = 32
 var map_built = false
-var start_pos = Vector2(379,312)
 var tiles_attempted = 0
 var player_light = preload("res://players/player_light.tscn")
 var finish:Vector2
+var paths_built = 0
 #when the level is loaded
 func _ready():
+	get_tree().get_first_node_in_group("player1").global_position = $p1_spawn.global_position
+	get_tree().get_first_node_in_group("player2").global_position = $p2_spawn.global_position
 	#set camera zoom for players
 	for camera in get_tree().get_nodes_in_group("camera"):
 		camera.zoom = Vector2(0.6,0.6)
 	#turn on the player lights
 	for players in get_tree().get_nodes_in_group("player"):
-		players.global_position = start_pos
 		players.add_child(player_light.instantiate())
 	#setup maze array
 	for num_x in MAZE_WIDTH:
@@ -32,17 +33,16 @@ func _ready():
 		finish = create_path(1,1)
 		$finish_area.global_position = finish*(100*$TileMap.scale.x)
 		$finish_area.global_position += Vector2((50*$TileMap.scale.x),(50*$TileMap.scale.x)) 
-		print($finish_area.global_position)
 		while(paths_possible):
-			var paths_built = 0
+			paths_built = 0
 			for num_x in MAZE_WIDTH:
 				for num_y in MAZE_HEIGHT:
-					if(can_make_path(num_x,num_y)):
-						paths_built += 1
+					if maze_array[num_x][num_y]:
 						create_path(num_x,num_y)
+			print(paths_built)
 			if(paths_built == 0):
 				paths_possible = false
-		#whenno more paths can be built anymore set map built to true and end the loop
+		#when no more paths can be built anymore set map built to true and end the loop
 		map_built = true
 	#nake the tile map the same as the array
 	for num_x in MAZE_WIDTH:
@@ -53,21 +53,14 @@ func _ready():
 				$TileMap.set_cell(0,Vector2(num_x,num_y),2,Vector2(0,0))
 	$TileMap.set_cell(0,finish,1,Vector2(0,0))
 
-func can_make_path(x,y):
-	var Return = false
-	if(x > 0):
-		pass
-	return Return
-
 func create_path(x,y):
+	var path_length = 0
 	#while can move is true
-	while(can_move(x,y) && (tiles_attempted < 100)):
+	while(can_move(x,y) && (tiles_attempted < 1000)):
 		#set moved to false
 		var moved = false
 		#until the path has been moved
-		while ((!moved) && (tiles_attempted < 100)):
-			if(tiles_attempted > 100):
-				print(tiles_attempted)
+		while ((!moved) && (tiles_attempted < 1000)):
 			tiles_attempted += 1
 			#get a random direction
 			var direction = randi_range(1,4)
@@ -81,6 +74,7 @@ func create_path(x,y):
 							if(tile_has_space(x,y-1,1)):
 								y -= 1
 								moved = true
+								path_length += 1
 				2:#down
 					#boundary
 					if(y+1 < MAZE_HEIGHT-1):
@@ -89,6 +83,7 @@ func create_path(x,y):
 							if(tile_has_space(x,y+1,2)):
 								y += 1
 								moved = true
+								path_length += 1
 				3:#left
 					#boundary
 					if(x-1 > 0):
@@ -97,6 +92,7 @@ func create_path(x,y):
 							if(tile_has_space(x-1,y,3)):
 								x -= 1
 								moved = true
+								path_length += 1
 				4:#right
 					#boundary
 					if(x+1 < MAZE_WIDTH-1):
@@ -105,11 +101,16 @@ func create_path(x,y):
 							if(tile_has_space(x+1,y,4)):
 								x += 1
 								moved = true
+								path_length += 1
 		#set that tile to path
 		maze_array[x][y] = false
-		if(tiles_attempted < 100):
+		if(tiles_attempted < 1000):
 			tiles_attempted = 0
+	if(path_length > 0):
+		print(path_length)
+		paths_built += 1
 	return Vector2(x,y)
+	
 
 func can_move(x,y):
 	var Return = false
