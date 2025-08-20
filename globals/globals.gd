@@ -1,5 +1,9 @@
 extends Node
 
+var p1_Score = 0
+
+var p2_Score = 0
+
 var player_1_hit:int = 0:
 	set(timesHit):
 		player_1_hit = timesHit

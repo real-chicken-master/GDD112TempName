@@ -163,12 +163,9 @@ func tile_has_space(x,y,direction):
 	return Return
 
 
-
-func _on_tree_exiting():
-	for players in get_tree().get_nodes_in_group("player"):
-		pass
-		#players.remove_child()
-
-
 func _on_finish_area_body_entered(body):
+	if body == get_tree().get_first_node_in_group("player1"):
+		Globals.p1_Score += 1
+	if body == get_tree().get_first_node_in_group("player2"):
+		Globals.p2_Score += 1
 	Globals.change_scene(preload("res://lobby/main_lobby.tscn").instantiate())
