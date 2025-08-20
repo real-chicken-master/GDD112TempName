@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://q7nneddn7er0"]
+[gd_scene load_steps=9 format=3 uid="uid://q7nneddn7er0"]
 
-[ext_resource type="Texture2D" uid="uid://d35k7uy35vj6h" path="res://Texture and Mesh/Platform.png" id="1_kjxtr"]
+[ext_resource type="Texture2D" uid="uid://d35k7uy35vj6h" path="res://Texture and Mesh/Platform.png" id="2_arjgq"]
 [ext_resource type="PackedScene" uid="uid://bp5nfx815koha" path="res://Minigames/platformer/spikereal.tscn" id="4_3rbv8"]
 [ext_resource type="PackedScene" uid="uid://dkule581imv8a" path="res://Minigames/platformer/platformer_win.tscn" id="4_evcii"]
 [ext_resource type="Texture2D" uid="uid://byiugkx1n1ikj" path="res://Texture and Mesh/halfplatofro.png" id="4_mxyb4"]
+[ext_resource type="Texture2D" uid="uid://b2krrx77bwjvi" path="res://Texture and Mesh/sign.png" id="5_nm3l1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iowm3"]
-texture = ExtResource("1_kjxtr")
+texture = ExtResource("2_arjgq")
 texture_region_size = Vector2i(200, 200)
 0:0/next_alternative_id = 2
 0:0/0 = 0
@@ -834,5 +835,15 @@ position = Vector2(-2785, -311)
 scale = Vector2(2.52585, 1)
 
 [node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = -3868.0
+offset_top = -683.0
+offset_right = -1678.0
+offset_bottom = -410.0
+theme_override_font_sizes/font_size = 200
+text = "
+"
+horizontal_alignment = 1
+
+[node name="Sign" type="Sprite2D" parent="."]
+position = Vector2(347, -247)
+texture = ExtResource("5_nm3l1")

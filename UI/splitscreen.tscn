@@ -65,6 +65,10 @@ position = Vector2(100, 50)
 
 [node name="level switcher" parent="HBoxContainer/SubViewportContainer/SubViewport" instance=ExtResource("2_wf0tu")]
 
+[node name="hitcounterp1" type="Label" parent="HBoxContainer/SubViewportContainer" groups=["p1hitcounter"]]
+layout_mode = 2
+text = "times hit"
+
 [node name="SubViewportContainer2" type="SubViewportContainer" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -83,9 +87,5 @@ position_smoothing_enabled = true
 position = Vector2(300, 50)
 
 [node name="hitcounterp2" type="Label" parent="HBoxContainer/SubViewportContainer2" groups=["p2hitcounter"]]
-layout_mode = 2
-text = "times hit"
-
-[node name="hitcounterp1" type="Label" parent="HBoxContainer/SubViewportContainer2" groups=["p1hitcounter"]]
 layout_mode = 2
 text = "times hit"
