@@ -14,7 +14,7 @@ func _ready():
 	get_tree().get_first_node_in_group("player2").global_position = $p2_spawn.global_position
 	#set camera zoom for players
 	for camera in get_tree().get_nodes_in_group("camera"):
-		camera.zoom = Vector2(0.6,0.6)
+		camera.zoom = Vector2(0.7,0.7)
 	#turn on the player lights
 	for players in get_tree().get_nodes_in_group("player"):
 		players.add_child(player_light.instantiate())
@@ -37,7 +37,7 @@ func _ready():
 			paths_built = 0
 			for num_x in MAZE_WIDTH:
 				for num_y in MAZE_HEIGHT:
-					if maze_array[num_x][num_y]:
+					if !maze_array[num_x][num_y]:
 						create_path(num_x,num_y)
 			print(paths_built)
 			if(paths_built == 0):

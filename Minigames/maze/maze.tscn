@@ -44,6 +44,7 @@ size = Vector2(100, 100)
 script = ExtResource("1_d5sv8")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+visible = false
 energy = 1.1
 blend_mode = 1
 
