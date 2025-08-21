@@ -15,38 +15,35 @@ func _process(_delta):
 
 func _on_easy_timeout():
 	easytimeout += 1
-	if easytimeout == 20:
+	if easytimeout == 30:
 		$Intermediate.start()
 	var spawnpos = $"Bullet Spawns".get_child(randi()%$"Bullet Spawns".get_child_count()).global_position
 	var bullet = bullets.instantiate()
 	bullet.global_position = spawnpos
 	$projectiles.add_child(bullet)
-	#$Easy.start
-	print("easy mode" + str(easytimeout))
+	$Easy.start
 
 
 func _on_intermediate_timeout():
 	intermediatetimeout += 1
-	if intermediatetimeout == 80:
+	if intermediatetimeout == 120:
 		$Hard.start()
 	var spawnpos = $"Bullet Spawns".get_child(randi()%$"Bullet Spawns".get_child_count()).global_position
 	var bullet = bullets.instantiate()
 	bullet.global_position = spawnpos
 	$projectiles.add_child(bullet)
-	#$Intermediate.start
-	print("intermediate mode" + str(intermediatetimeout))
+	$Intermediate.start
 
 
 func _on_hard_timeout():
 	hardtimeout += 1
-	if hardtimeout == 150:
+	if hardtimeout == 220:
 		$Extreme.start()
 	var spawnpos = $"Bullet Spawns".get_child(randi()%$"Bullet Spawns".get_child_count()).global_position
 	var bullet = bullets.instantiate()
 	bullet.global_position = spawnpos
 	$projectiles.add_child(bullet)
-	#$Hard.start
-	print("hard mode" + str(hardtimeout))
+	$Hard.start
 
 
 func _on_extreme_timeout():
@@ -55,4 +52,3 @@ func _on_extreme_timeout():
 	bullet.global_position = spawnpos
 	$projectiles.add_child(bullet)
 	$Extreme.start
-	print("extreme mode")
