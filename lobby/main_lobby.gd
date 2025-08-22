@@ -1,6 +1,6 @@
 extends Node2D
-var p1_Text = get_tree().get_first_node_in_group("p1hitcounter")
-var p2_Text = get_tree().get_first_node_in_group("p2hitcounter")
+@onready var p1_Text = get_tree().get_first_node_in_group("p1hitcounter")
+@onready var p2_Text = get_tree().get_first_node_in_group("p2hitcounter")
 var start_pos = [Vector2(0,0),Vector2(200,0)]
 # Called when the node enters the scene tree for the first time.
 func _ready():
