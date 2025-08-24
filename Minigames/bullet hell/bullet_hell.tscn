@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://caehaixig1qq1"]
 
 [ext_resource type="Script" path="res://Minigames/bullet hell/bullet_hell.gd" id="1_4bkeb"]
-[ext_resource type="Texture2D" uid="uid://b8h7xvq7mfdef" path="res://Texture and Mesh/ArcadeWall.png" id="2_vyarn"]
+[ext_resource type="Texture2D" uid="uid://beeektus3ov5q" path="res://Texture and Mesh/ArcadeWall.png" id="2_vyarn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1osdu"]
 texture = ExtResource("2_vyarn")

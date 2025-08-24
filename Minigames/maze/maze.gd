@@ -1,5 +1,8 @@
 extends Node2D
 
+
+
+
 var maze_array: Array[Array] = [] # true is collison false is no collision
 const MAZE_WIDTH = 32
 const MAZE_HEIGHT = 32

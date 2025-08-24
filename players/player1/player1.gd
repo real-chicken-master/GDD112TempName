@@ -1,4 +1,5 @@
 extends CharacterBody2D
+@onready var audio_stream_player = $AudioStreamPlayer
 
 var movemode = "topdown"
 const SPEED = 700

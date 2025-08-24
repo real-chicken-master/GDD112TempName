@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bh4t7xil7xps7"]
 
 [ext_resource type="Script" path="res://Minigames/bullet hell/bullet.gd" id="1_q0epf"]
-[ext_resource type="Texture2D" uid="uid://c31ej3xxlky2s" path="res://Texture and Mesh/bulletexture.png" id="2_djp4q"]
+[ext_resource type="Texture2D" uid="uid://b2dflg8gcwlc" path="res://Texture and Mesh/bulletexture.png" id="2_djp4q"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rjksl"]
 radius = 50.0
@@ -18,7 +18,7 @@ texture = ExtResource("2_djp4q")
 shape = SubResource("CircleShape2D_rjksl")
 
 [node name="despawntimer" type="Timer" parent="."]
-wait_time = 9.0
+wait_time = 11.0
 autostart = true
 
 [connection signal="timeout" from="despawntimer" to="." method="_on_despawntimer_timeout"]
