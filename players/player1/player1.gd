@@ -1,5 +1,6 @@
 extends CharacterBody2D
-@onready var playerjump_1 = $playerjump
+@onready var player_jump_1 = $playerJump_1
+
 
 
 var movemode = "topdown"
@@ -25,7 +26,7 @@ func _physics_process(_delta):
 		if(is_on_floor()):
 			if Input.is_action_just_pressed("up1"):
 				velocity.y -= 2000
-				playerjump_1.play()
+				player_jump_1.play()
 		else:
 			velocity.y += 100
 	move_and_slide()
