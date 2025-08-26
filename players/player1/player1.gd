@@ -1,5 +1,6 @@
 extends CharacterBody2D
-@onready var audio_stream_player = $AudioStreamPlayer
+@onready var playerjump_1 = $playerjump
+
 
 var movemode = "topdown"
 const SPEED = 700
@@ -24,6 +25,7 @@ func _physics_process(_delta):
 		if(is_on_floor()):
 			if Input.is_action_just_pressed("up1"):
 				velocity.y -= 2000
+				playerjump_1.play()
 		else:
 			velocity.y += 100
 	move_and_slide()

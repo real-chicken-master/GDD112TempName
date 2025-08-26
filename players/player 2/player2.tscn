@@ -30,3 +30,5 @@ scale = Vector2(1, 1.02606)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionShape2D/Area2D"]
 shape = SubResource("CircleShape2D_ooqbh")
+
+[node name="playerJump_2" type="AudioStreamPlayer" parent="."]
