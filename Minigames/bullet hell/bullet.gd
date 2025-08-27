@@ -4,6 +4,9 @@ const speed = 250
 var player_array = []
 var direction
 
+@onready var p1 = get_tree().get_first_node_in_group("player1")
+@onready var p2 = get_tree().get_first_node_in_group("player2")
+
 func _ready():
 	for players in get_tree().get_nodes_in_group("player"):
 		player_array.push_front(players)
@@ -13,19 +16,7 @@ func _ready():
 
 func _process(delta):
 	global_position += direction * speed * delta
-	for body in get_overlapping_bodies():
-		if (body.name == "res://players/player1/player1.tscn" || "res://players/player 2/player2.tscn"):
-			hit()
-			queue_free()
-			if (body.name == "res://players/player1/player1.tscn"):
-				Globals.p2_score += 1
-				print("p1 hit")
-				print(Globals.p2_Score)
-			if (body.name == "res://players/player 2/player2.tscn"):
-				Globals.p1_Score += 1
-				print("p2 hit")
-				print(Globals.p1_Score)
-# checking if its the players that made contact with the bullets and giving points to whoever didnt hit the bullet and the movement code toward the player chosen.
+
 
 func _on_despawntimer_timeout():
 	queue_free()
@@ -33,3 +24,13 @@ func _on_despawntimer_timeout():
 
 func hit():
 	Globals.change_scene(preload("res://lobby/main_lobby.tscn").instantiate())
+
+# checking if its the players that made contact with the bullets and giving points to whoever didnt hit the bullet and the movement code toward the player chosen.
+func _on_body_entered(body):
+	if (body == p1 || p2):
+		if (body == p1):
+			Globals.p2_Score += 1
+		if (body == p2):
+			Globals.p1_Score += 1
+		hit()
+	queue_free()

@@ -3,8 +3,7 @@ extends CharacterBody2D
 @onready var coyote_timer_p_1 = $Coyote_TimerP1
 
 #jump sound effect
-@onready var player_jump_1 = $player_Jump_1
-
+@onready var player_jump_1 = $playerjump
 
 #the current move mode of player 1
 var move_mode = "topdown"
