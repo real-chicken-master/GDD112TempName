@@ -16,15 +16,7 @@ func _ready():
 
 func _process(delta):
 	global_position += direction * speed * delta
-	for body in get_overlapping_bodies():
-		if (body == p1 || p2):
-			hit()
-		if (body == p1):
-			Globals.p2_score += 1
-		if (body == p2):
-			Globals.p1_Score += 1
-		queue_free()
-# checking if its the players that made contact with the bullets and giving points to whoever didnt hit the bullet and the movement code toward the player chosen.
+
 
 func _on_despawntimer_timeout():
 	queue_free()
@@ -32,3 +24,13 @@ func _on_despawntimer_timeout():
 
 func hit():
 	Globals.change_scene(preload("res://lobby/main_lobby.tscn").instantiate())
+
+# checking if its the players that made contact with the bullets and giving points to whoever didnt hit the bullet and the movement code toward the player chosen.
+func _on_body_entered(body):
+	if (body == p1 || p2):
+		if (body == p1):
+			Globals.p2_Score += 1
+		if (body == p2):
+			Globals.p1_Score += 1
+		hit()
+	queue_free()

@@ -55,5 +55,5 @@ wait_time = 0.01
 [connection signal="timeout" from="Easy" to="." method="_on_easy_timeout"]
 [connection signal="timeout" from="Intermediate" to="." method="_on_intermediate_timeout"]
 [connection signal="timeout" from="Hard" to="." method="_on_hard_timeout"]
-[connection signal="timeout" from="Extreme" to="." method="_on_extreme_timeout"]
 [connection signal="timeout" from="Extreme" to="." method="_on_hard_timeout"]
+[connection signal="timeout" from="Extreme" to="." method="_on_extreme_timeout"]
