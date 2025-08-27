@@ -22,7 +22,7 @@ func _on_body_entered(body):
 		if Globals.player_1_hit > Globals.player_2_hit:Globals.p2_Score += 1
 		if Globals.player_2_hit > Globals.player_1_hit: label.text = "p1 win!"
 		if Globals.player_2_hit > Globals.player_1_hit:Globals.p1_Score += 1
-		if Globals.player_2_hit == Globals.player_1_hit: label.text = "TIE!"	
+		if Globals.player_2_hit == Globals.player_1_hit: label.text = "TIE!"
 		
 		await get_tree().create_timer(2).timeout
 		Globals.player_1_hit = 0
