@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://djvanbdp8c7no"]
+[gd_scene load_steps=6 format=3 uid="uid://djvanbdp8c7no"]
 
 [ext_resource type="Script" path="res://players/player 2/player2.gd" id="1_q82fh"]
 [ext_resource type="Texture2D" uid="uid://oy8a2hwomk6j" path="res://Texture and Mesh/Screenshot_2025-08-01_144913-removebg-preview.png" id="2_v4vbq"]
+[ext_resource type="AudioStream" uid="uid://fbk0hudxnb2v" path="res://AUDIO/shrtplop.wav" id="3_td28j"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2kqkd"]
 radius = 47.0
@@ -32,3 +33,5 @@ scale = Vector2(1, 1.02606)
 shape = SubResource("CircleShape2D_ooqbh")
 
 [node name="playerJump_2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_td28j")
+pitch_scale = 0.5

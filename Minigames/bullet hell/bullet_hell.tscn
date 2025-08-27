@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://caehaixig1qq1"]
 
 [ext_resource type="Script" path="res://Minigames/bullet hell/bullet_hell.gd" id="1_4bkeb"]
-[ext_resource type="Texture2D" uid="uid://beeektus3ov5q" path="res://Texture and Mesh/ArcadeWall.png" id="2_vyarn"]
+[ext_resource type="Texture2D" uid="uid://cyf1bwyfkocfq" path="res://Texture and Mesh/ArcadeWall.png" id="2_vyarn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1osdu"]
 texture = ExtResource("2_vyarn")
@@ -41,17 +41,16 @@ position = Vector2(1608, 0)
 position = Vector2(0, 1058)
 
 [node name="Easy" type="Timer" parent="."]
-wait_time = 1.5
 autostart = true
 
 [node name="Intermediate" type="Timer" parent="."]
-wait_time = 0.3
+wait_time = 0.6
 
 [node name="Hard" type="Timer" parent="."]
-wait_time = 0.05
+wait_time = 0.1
 
 [node name="Extreme" type="Timer" parent="."]
-wait_time = 0.001
+wait_time = 0.01
 
 [connection signal="timeout" from="Easy" to="." method="_on_easy_timeout"]
 [connection signal="timeout" from="Intermediate" to="." method="_on_intermediate_timeout"]
