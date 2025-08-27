@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bwqor80lqgqvq"]
+[gd_scene load_steps=5 format=3 uid="uid://bwqor80lqgqvq"]
 
 [ext_resource type="Script" path="res://lobby/minigame_3.gd" id="1_frd4a"]
+[ext_resource type="LabelSettings" uid="uid://vvbpbqq237n5" path="res://lobby/change_minigame_label.tres" id="2_p8m22"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dgx6a"]
 radius = 55.0364
@@ -20,3 +21,13 @@ shape = SubResource("CircleShape2D_dgx6a")
 position = Vector2(1.49012e-06, 1.0252e-05)
 scale = Vector2(110.125, 110)
 mesh = SubResource("SphereMesh_mep34")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -42.0
+offset_top = -45.0
+offset_right = 42.0
+offset_bottom = 44.0
+text = "maze"
+label_settings = ExtResource("2_p8m22")
+horizontal_alignment = 1
+vertical_alignment = 1
