@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://caehaixig1qq1"]
 
 [ext_resource type="Script" path="res://Minigames/bullet hell/bullet_hell.gd" id="1_4bkeb"]
-[ext_resource type="Texture2D" uid="uid://d3kie7yi2ut5b" path="res://Texture and Mesh/ArcadeWall.png" id="2_vyarn"]
+[ext_resource type="Texture2D" uid="uid://cyf1bwyfkocfq" path="res://Texture and Mesh/ArcadeWall.png" id="2_vyarn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1osdu"]
 texture = ExtResource("2_vyarn")
@@ -51,6 +51,24 @@ wait_time = 0.1
 
 [node name="Extreme" type="Timer" parent="."]
 wait_time = 0.01
+
+[node name="Label" type="Label" parent="."]
+offset_left = -216.0
+offset_top = -68.0
+offset_right = 208.0
+offset_bottom = -45.0
+text = "Use W,A,S,D and UP,DOWN,LEFT,RIGHT inputs to move.
+
+Dodge bullets and survive as long as possible, whoever gets
+hit first losesand the other person gains 1 point"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = -220.0
+offset_top = 27.0
+offset_right = 239.0
+offset_bottom = 128.0
+text = "In your review note down how long you survived for (set a timer)
+so that the bullethell can be balanced more"
 
 [connection signal="timeout" from="Easy" to="." method="_on_easy_timeout"]
 [connection signal="timeout" from="Intermediate" to="." method="_on_intermediate_timeout"]
