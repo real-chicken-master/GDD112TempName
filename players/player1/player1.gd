@@ -43,7 +43,7 @@ func _physics_process(_delta):
 			if coyote_timer_p_1.time_left > 0 :
 				coyote_timer_p_1.stop()
 				player_jump_1.play()
-				velocity.y -= 2300
+				velocity.y -= 2222
 				
 				
 		velocity.y += 100
