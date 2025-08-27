@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://nx4ggy1h8ovm" path="res://players/player1/player1.tscn" id="1_slcjd"]
 [ext_resource type="PackedScene" uid="uid://djvanbdp8c7no" path="res://players/player 2/player2.tscn" id="2_5bn30"]
 [ext_resource type="PackedScene" uid="uid://ox6eyudg8jub" path="res://UI/level_switcher.tscn" id="2_wf0tu"]
-[ext_resource type="AudioStream" uid="uid://dgq7r2mi4bhyf" path="res://AUDIO/Cordless_Electric_Power_Drill_Sounds.mp3" id="4_cqdsq"]
+[ext_resource type="AudioStream" uid="uid://b8cmq2jmfvgro" path="res://AUDIO/Cordless_Electric_Power_Drill_Sounds.mp3" id="4_cqdsq"]
 
 [sub_resource type="GDScript" id="GDScript_3ulip"]
 script/source = "extends SubViewport

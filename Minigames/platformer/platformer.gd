@@ -4,7 +4,7 @@ extends Node2D
 #set player movement mode to platformer mode and the spawn possition in the minigame.
 func _ready():
 	for players in get_tree().get_nodes_in_group("player"):
-		players.movemode = "platformer"
+		players.move_mode = "platformer"
 		players.global_position = Vector2(0,0)
 
 
