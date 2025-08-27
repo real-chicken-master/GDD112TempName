@@ -27,5 +27,5 @@ func _on_body_entered(body):
 		Globals.player_1_hit = 0
 		Globals.player_2_hit = 0
 		for players in get_tree().get_nodes_in_group("player"):
-			players.movemode = "topdown"
+			players.move_mode = "topdown"
 		Globals.change_scene(preload("res://lobby/main_lobby.tscn").instantiate())

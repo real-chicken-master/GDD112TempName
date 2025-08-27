@@ -35,3 +35,7 @@ shape = SubResource("CircleShape2D_ooqbh")
 [node name="playerJump_2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_td28j")
 pitch_scale = 0.5
+
+[node name="Coyote_TimerP2" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true

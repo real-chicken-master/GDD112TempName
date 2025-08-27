@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@onready var coyote_timer_p_1 = $Coyote_TimerP1
+
 #jump sound effect
 @onready var player_jump_1 = $player_Jump_1
 
@@ -36,16 +38,17 @@ func _physics_process(_delta):
 		#jump
 		#if the player is on the floor
 		if(is_on_floor()):
-			#if the jump button is pressed
-			if Input.is_action_just_pressed("up1"):
-				#make the player jump up
-				velocity.y -= 2000
-				#play sound effect
+			coyote_timer_p_1.start(0)
+	#if the jump button is pressed
+		if Input.is_action_just_pressed("up1"):
+			if coyote_timer_p_1.time_left > 0 :
+				coyote_timer_p_1.stop()
 				player_jump_1.play()
-		else:
-			#decrease the jump speed 
-			velocity.y += 100
-	#moe the player
+				velocity.y -= 2300
+				
+				
+		velocity.y += 100
+	#move the player
 	move_and_slide()
 
 #connect to the split screen camera 
