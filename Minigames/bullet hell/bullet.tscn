@@ -18,7 +18,7 @@ texture = ExtResource("2_djp4q")
 shape = SubResource("CircleShape2D_rjksl")
 
 [node name="despawntimer" type="Timer" parent="."]
-wait_time = 11.0
+wait_time = 9.0
 autostart = true
 
 [connection signal="timeout" from="despawntimer" to="." method="_on_despawntimer_timeout"]

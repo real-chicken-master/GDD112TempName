@@ -17,10 +17,14 @@ func _process(delta):
 		if (body.name == "res://players/player1/player1.tscn" || "res://players/player 2/player2.tscn"):
 			hit()
 			queue_free()
-		if (body.name == "res://players/player1/player1.tscn"):
-			Globals.p2_score += 1
-		if (body.name == "res://players/player 2/player2.tscn"):
-			Globals.p1_Score += 1
+			if (body.name == "res://players/player1/player1.tscn"):
+				Globals.p2_score += 1
+				print("p1 hit")
+				print(Globals.p2_Score)
+			if (body.name == "res://players/player 2/player2.tscn"):
+				Globals.p1_Score += 1
+				print("p2 hit")
+				print(Globals.p1_Score)
 # checking if its the players that made contact with the bullets and giving points to whoever didnt hit the bullet and the movement code toward the player chosen.
 
 func _on_despawntimer_timeout():
