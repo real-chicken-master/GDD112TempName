@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://c6mx5yrnxiiqu"]
+[gd_scene load_steps=5 format=3 uid="uid://c6mx5yrnxiiqu"]
 
 [ext_resource type="Script" path="res://lobby/minigame_1.gd" id="1_ddjle"]
+[ext_resource type="LabelSettings" uid="uid://vvbpbqq237n5" path="res://lobby/change_minigame_label.tres" id="2_fn58l"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xm2wb"]
 radius = 55.0364
@@ -20,3 +21,13 @@ shape = SubResource("CircleShape2D_xm2wb")
 position = Vector2(1.49012e-06, 1.0252e-05)
 scale = Vector2(110.125, 110)
 mesh = SubResource("SphereMesh_761y7")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -52.0
+offset_top = -46.0
+offset_right = 53.0
+offset_bottom = 43.0
+text = "Bullet Hell"
+label_settings = ExtResource("2_fn58l")
+horizontal_alignment = 1
+vertical_alignment = 1
