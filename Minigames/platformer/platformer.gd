@@ -1,6 +1,5 @@
 extends Node2D
 
-#var hitcounter = 0
 
 #set player movement mode to platformer mode and the spawn possition in the minigame.
 func _ready():

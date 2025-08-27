@@ -11,7 +11,7 @@ func _on_body_entered(body):
 		player_2_finished = true
 
 	if body.name == "player1":
-		player_1_finished = true	
+		player_1_finished = true
 
 	#when player 1 and 2 finished is set to true it checks in a global who has the lower score (times hit) and gives them a point in the score.
 	if player_1_finished and player_2_finished:
