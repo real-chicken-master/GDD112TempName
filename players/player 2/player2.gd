@@ -1,6 +1,7 @@
 extends CharacterBody2D
 #jump sound effect
-@onready var player_jump_2 = $playerjump2
+@onready var player_jump_2 = $playerJump_2
+
 
 #the current move mode of player 2
 var move_mode = "topdown"
