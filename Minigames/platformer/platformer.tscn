@@ -790,7 +790,7 @@ position = Vector2(-694, -102)
 [node name="EvilSpike7" parent="SpikyBox" instance=ExtResource("4_3rbv8")]
 position = Vector2(-496, -97)
 
-[node name="spikereal8" parent="SpikyBox" instance=ExtResource("4_3rbv8")]
+[node name="HalfSpikeEvil8" parent="SpikyBox" instance=ExtResource("4_3rbv8")]
 position = Vector2(-1488, -425)
 scale = Vector2(1, 0.400001)
 
