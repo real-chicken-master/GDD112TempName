@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://b4my264vw45n"]
 
 [ext_resource type="Script" path="res://Minigames/maze/maze.gd" id="1_d5sv8"]
-[ext_resource type="Texture2D" uid="uid://yrxqe4kb6ffh" path="res://Texture and Mesh/maze/wall.png" id="2_cjl1d"]
-[ext_resource type="Texture2D" uid="uid://byfrir71lftfg" path="res://Texture and Mesh/maze/finish.png" id="3_qomrb"]
-[ext_resource type="Texture2D" uid="uid://dqotqj7ifm7nv" path="res://Texture and Mesh/maze/path.png" id="4_tyqt1"]
+[ext_resource type="Texture2D" uid="uid://2ng48qvns51x" path="res://Texture and Mesh/maze/wall.png" id="2_cjl1d"]
+[ext_resource type="Texture2D" uid="uid://u1l780dwv0j1" path="res://Texture and Mesh/maze/finish.png" id="3_qomrb"]
+[ext_resource type="Texture2D" uid="uid://cspnax1o5543j" path="res://Texture and Mesh/maze/path.png" id="4_tyqt1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vrrjp"]
 resource_name = "wall"

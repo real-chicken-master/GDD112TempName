@@ -1,10 +1,13 @@
 extends Node2D
 
 #this comment is to state that all the commented out lines are so they are commented out
-
+#this comment is to explain that the previous comment was a comment explaining the comments
 #this comment is becasue i dont like comments
+#this comment is because i felt like adding another comment
 
-var maze_array: Array[Array] = [] # true is collison false is no collision
+
+var maze_array: Array[Array] = [] 
+# true is collison false is no collision
 # the width of the maze
 const MAZE_WIDTH = 32
 #the height of the maze 
@@ -249,3 +252,4 @@ func _on_finish_area_body_entered(body):
 		Globals.p2_Score += 1
 	#change the scene to the main loby
 	Globals.change_scene(preload("res://lobby/main_lobby.tscn").instantiate())
+#this is a comment to show the end of the script

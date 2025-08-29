@@ -1,9 +1,10 @@
 extends CharacterBody2D
 #jump sound effect
+@onready var player_jump_2 = $PlayerJump2
 
-@onready var player_jump_2 = $playerJump_2
 
-@onready var coyote_timer_p_2 = $Coyote_TimerP2
+
+@onready var coyote_timer_p2 = $CoyoteTimerP2
 
 
 
@@ -40,11 +41,11 @@ func _physics_process(_delta):
 		#jump
 		#if the player is on the floor
 		if(is_on_floor()):
-			coyote_timer_p_2.start(0)
+			coyote_timer_p2.start(0)
 	#if the jump button is pressed
 		if Input.is_action_just_pressed("up2"):
-			if coyote_timer_p_2.time_left > 0 :
-				coyote_timer_p_2.stop()
+			if coyote_timer_p2.time_left > 0 :
+				coyote_timer_p2.stop()
 				player_jump_2.play()
 				velocity.y -= 2222
 				

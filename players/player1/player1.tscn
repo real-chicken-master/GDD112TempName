@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://nx4ggy1h8ovm"]
 
 [ext_resource type="Script" path="res://players/player1/player1.gd" id="1_b3iya"]
-[ext_resource type="Texture2D" uid="uid://cnvfsbtmk1yoe" path="res://Texture and Mesh/Screenshot_2025-08-01_144907-removebg-preview.png" id="2_dqxs7"]
+[ext_resource type="Texture2D" uid="uid://nqghi77b0qk2" path="res://player 1.png" id="2_1uw1x"]
 [ext_resource type="AudioStream" uid="uid://b3wadtgaxcwiu" path="res://AUDIO/shrtplop.wav" id="3_e4jsa"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8m3wl"]
@@ -18,10 +18,10 @@ script = ExtResource("1_b3iya")
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
 position = Vector2(1, 0)
 
-[node name="Lowquality-20250801-removebg-preview" type="Sprite2D" parent="."]
-position = Vector2(-3, 5.45617e-06)
-scale = Vector2(0.604317, 0.357576)
-texture = ExtResource("2_dqxs7")
+[node name="PlayerSprite1" type="Sprite2D" parent="."]
+position = Vector2(2, 2.5)
+scale = Vector2(0.546763, 0.356115)
+texture = ExtResource("2_1uw1x")
 region_rect = Rect2(71.6043, 46.466, 155.507, 258.932)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -33,7 +33,7 @@ debug_color = Color(0, 0.584314, 0.788235, 0.419608)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionShape2D/Area2D"]
 shape = SubResource("CircleShape2D_j6704")
 
-[node name="PlayerJump" type="AudioStreamPlayer" parent="."]
+[node name="PlayerJump1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_e4jsa")
 
 [node name="CoyoteTimerP1" type="Timer" parent="."]
