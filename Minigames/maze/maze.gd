@@ -56,9 +56,9 @@ func _ready():
 		finish = create_path(1,1)
 		#move the finish area
 		#move to the positon
-		$finish_area.global_position = finish*(100*$TileMap.scale.x)
+		$FinishArea.global_position = finish*(100*$TileMap.scale.x)
 		#fix the offset
-		$finish_area.global_position += Vector2((50*$TileMap.scale.x),(50*$TileMap.scale.x)) 
+		$FinishArea.global_position += Vector2((50*$TileMap.scale.x),(50*$TileMap.scale.x)) 
 		#repeat until no paths are possible
 		while(paths_possible):
 			#set paths built to 0
