@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://caehaixig1qq1"]
+[gd_scene load_steps=6 format=3 uid="uid://caehaixig1qq1"]
 
 [ext_resource type="Script" path="res://Minigames/bullet hell/bullet_hell.gd" id="1_4bkeb"]
+[ext_resource type="Texture2D" uid="uid://cq2mwxsdgxkmu" path="res://Texture and Mesh/background art.png" id="2_b8qly"]
 [ext_resource type="Texture2D" uid="uid://cyf1bwyfkocfq" path="res://Texture and Mesh/ArcadeWall.png" id="2_vyarn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1osdu"]
@@ -19,12 +20,28 @@ sources/0 = SubResource("TileSetAtlasSource_1osdu")
 [node name="Bullet Hell" type="Node2D"]
 script = ExtResource("1_4bkeb")
 
+[node name="BackgroundArt" type="Sprite2D" parent="."]
+texture_repeat = 2
+position = Vector2(14, 5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_b8qly")
+region_enabled = true
+region_rect = Rect2(-29746.2, -5259.12, 42508.1, 21187.8)
+
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_m5qtq")
 format = 2
 layer_0/tile_data = PackedInt32Array(131069, 0, 0, 65533, 0, 0, -3, 0, 0, -65539, 0, 0, -65538, 0, 0, -65537, 0, 0, -131072, 0, 0, -131071, 0, 0, -131070, 0, 0, -65534, 0, 0, 2, 0, 0, 65538, 0, 0, 65537, 0, 0, 65536, 0, 0, 131071, 0, 0, 131070, 0, 0)
 
 [node name="projectiles" type="Node2D" parent="."]
+
+[node name="PlayerSpawns" type="Node2D" parent="."]
+
+[node name="p1 spawn" type="Marker2D" parent="PlayerSpawns"]
+position = Vector2(-100, 145)
+
+[node name="p2 spawn" type="Marker2D" parent="PlayerSpawns"]
+position = Vector2(100, 145)
 
 [node name="Bullet Spawns" type="Node2D" parent="."]
 
@@ -65,13 +82,13 @@ hit first losesand the other person gains 1 point"
 [node name="Label2" type="Label" parent="."]
 offset_left = -220.0
 offset_top = 27.0
-offset_right = 239.0
-offset_bottom = 128.0
+offset_right = 279.0
+offset_bottom = 76.0
 text = "In your review note down how long you survived for (set a timer)
 so that the bullethell can be balanced more"
 
 [connection signal="timeout" from="Easy" to="." method="_on_easy_timeout"]
 [connection signal="timeout" from="Intermediate" to="." method="_on_intermediate_timeout"]
 [connection signal="timeout" from="Hard" to="." method="_on_hard_timeout"]
-[connection signal="timeout" from="Extreme" to="." method="_on_hard_timeout"]
 [connection signal="timeout" from="Extreme" to="." method="_on_extreme_timeout"]
+[connection signal="timeout" from="Extreme" to="." method="_on_hard_timeout"]
