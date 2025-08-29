@@ -33,7 +33,7 @@ debug_color = Color(0, 0.584314, 0.788235, 0.419608)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionShape2D/Area2D"]
 shape = SubResource("CircleShape2D_j6704")
 
-[node name="PlayerJump" type="AudioStreamPlayer" parent="."]
+[node name="PlayerJump1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_e4jsa")
 
 [node name="CoyoteTimerP1" type="Timer" parent="."]
