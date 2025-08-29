@@ -1,11 +1,11 @@
 [gd_scene load_steps=11 format=3 uid="uid://q7nneddn7er0"]
 
-[ext_resource type="Texture2D" uid="uid://d35k7uy35vj6h" path="res://Texture and Mesh/Platform.png" id="2_arjgq"]
-[ext_resource type="Texture2D" uid="uid://chmuo5binchuq" path="res://Texture and Mesh/reladirt.png" id="3_w08ut"]
+[ext_resource type="Texture2D" uid="uid://bip0wdsn64dqg" path="res://Texture and Mesh/Platform.png" id="2_arjgq"]
+[ext_resource type="Texture2D" uid="uid://cse46cfmyt1qf" path="res://Texture and Mesh/reladirt.png" id="3_w08ut"]
 [ext_resource type="PackedScene" uid="uid://bp5nfx815koha" path="res://Minigames/platformer/spikereal.tscn" id="4_3rbv8"]
 [ext_resource type="PackedScene" uid="uid://dkule581imv8a" path="res://Minigames/platformer/platformer_win.tscn" id="4_evcii"]
-[ext_resource type="Texture2D" uid="uid://byiugkx1n1ikj" path="res://Texture and Mesh/halfplatofro.png" id="4_mxyb4"]
-[ext_resource type="Texture2D" uid="uid://b2krrx77bwjvi" path="res://Texture and Mesh/sign.png" id="5_nm3l1"]
+[ext_resource type="Texture2D" uid="uid://dgow4w58nqrp4" path="res://Texture and Mesh/halfplatofro.png" id="4_mxyb4"]
+[ext_resource type="Texture2D" uid="uid://bkptqwc4ococh" path="res://Texture and Mesh/sign.png" id="5_nm3l1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iowm3"]
 texture = ExtResource("2_arjgq")
@@ -762,76 +762,76 @@ sources/0 = SubResource("TileSetAtlasSource_iowm3")
 sources/3 = SubResource("TileSetAtlasSource_yoncd")
 sources/1 = SubResource("TileSetAtlasSource_v87ko")
 
-[node name="platformer" type="Node2D"]
+[node name="Platformer" type="Node2D"]
 
-[node name="spikybox" type="Node2D" parent="."]
+[node name="SpikyBox" type="Node2D" parent="."]
 
-[node name="spikereal" parent="spikybox" instance=ExtResource("4_3rbv8")]
+[node name="EvilSpike" parent="SpikyBox" instance=ExtResource("4_3rbv8")]
 position = Vector2(-983, -98)
 
-[node name="spikereal2" parent="spikybox" instance=ExtResource("4_3rbv8")]
+[node name="EvilSpike2" parent="SpikyBox" instance=ExtResource("4_3rbv8")]
 position = Vector2(-893, -500)
 rotation = 3.14159
 
-[node name="spikereal3" parent="spikybox" instance=ExtResource("4_3rbv8")]
+[node name="EvilSpike3" parent="SpikyBox" instance=ExtResource("4_3rbv8")]
 position = Vector2(-693, -500)
 rotation = 3.13789
 
-[node name="spikereal4" parent="spikybox" instance=ExtResource("4_3rbv8")]
+[node name="EvilSpike4" parent="SpikyBox" instance=ExtResource("4_3rbv8")]
 position = Vector2(-495, -495)
 rotation = 3.13789
 
-[node name="spikereal5" parent="spikybox" instance=ExtResource("4_3rbv8")]
+[node name="Evisp5" parent="SpikyBox" instance=ExtResource("4_3rbv8")]
 position = Vector2(-1380, -304)
 
-[node name="spikereal6" parent="spikybox" instance=ExtResource("4_3rbv8")]
+[node name="EvilSpike6" parent="SpikyBox" instance=ExtResource("4_3rbv8")]
 position = Vector2(-694, -102)
 
-[node name="spikereal7" parent="spikybox" instance=ExtResource("4_3rbv8")]
+[node name="EvilSpike7" parent="SpikyBox" instance=ExtResource("4_3rbv8")]
 position = Vector2(-496, -97)
 
-[node name="spikereal8" parent="spikybox" instance=ExtResource("4_3rbv8")]
+[node name="spikereal8" parent="SpikyBox" instance=ExtResource("4_3rbv8")]
 position = Vector2(-1488, -425)
 scale = Vector2(1, 0.400001)
 
-[node name="spikereal9" parent="spikybox" instance=ExtResource("4_3rbv8")]
+[node name="spikereal9" parent="SpikyBox" instance=ExtResource("4_3rbv8")]
 position = Vector2(-2083, -736)
 scale = Vector2(1, 0.360001)
 
-[node name="spikereal10" parent="spikybox" instance=ExtResource("4_3rbv8")]
+[node name="spikereal10" parent="SpikyBox" instance=ExtResource("4_3rbv8")]
 position = Vector2(-1686, -1100)
 
-[node name="spikereal11" parent="spikybox" instance=ExtResource("4_3rbv8")]
+[node name="spikereal11" parent="SpikyBox" instance=ExtResource("4_3rbv8")]
 position = Vector2(-1286.24, -1084.23)
 
-[node name="spikereal12" parent="spikybox" instance=ExtResource("4_3rbv8")]
+[node name="spikereal12" parent="SpikyBox" instance=ExtResource("4_3rbv8")]
 position = Vector2(-1490, -1104)
 
-[node name="spikereal13" parent="spikybox" instance=ExtResource("4_3rbv8")]
+[node name="spikereal13" parent="SpikyBox" instance=ExtResource("4_3rbv8")]
 position = Vector2(-2083, -1903)
 
-[node name="spikereal14" parent="spikybox" instance=ExtResource("4_3rbv8")]
+[node name="spikereal14" parent="SpikyBox" instance=ExtResource("4_3rbv8")]
 position = Vector2(-1090, -1100)
 
-[node name="spikereal15" parent="spikybox" instance=ExtResource("4_3rbv8")]
+[node name="spikereal15" parent="SpikyBox" instance=ExtResource("4_3rbv8")]
 position = Vector2(-2083, -1401)
 
-[node name="spikereal16" parent="spikybox" instance=ExtResource("4_3rbv8")]
+[node name="spikereal16" parent="SpikyBox" instance=ExtResource("4_3rbv8")]
 position = Vector2(-1688, -1695)
 
-[node name="spikereal17" parent="spikybox" instance=ExtResource("4_3rbv8")]
+[node name="spikereal17" parent="SpikyBox" instance=ExtResource("4_3rbv8")]
 position = Vector2(-2882, -1298)
 rotation = 1.58784
 
-[node name="spikereal18" parent="spikybox" instance=ExtResource("4_3rbv8")]
+[node name="spikereal18" parent="SpikyBox" instance=ExtResource("4_3rbv8")]
 position = Vector2(-2668, -1302)
 rotation = -1.57562
 
-[node name="spikereal19" parent="spikybox" instance=ExtResource("4_3rbv8")]
+[node name="spikereal19" parent="SpikyBox" instance=ExtResource("4_3rbv8")]
 position = Vector2(-2878, -1088)
 rotation = 1.58784
 
-[node name="spikereal20" parent="spikybox" instance=ExtResource("4_3rbv8")]
+[node name="spikereal20" parent="SpikyBox" instance=ExtResource("4_3rbv8")]
 position = Vector2(-2683, -1084)
 rotation = -1.57562
 
