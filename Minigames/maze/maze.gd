@@ -1,8 +1,10 @@
 extends Node2D
 
 #this comment is to state that all the commented out lines are so they are commented out
-
+#this comment is to explain that the previous comment was a comment explaining the comments
 #this comment is becasue i dont like comments
+#this comment is because i felt like adding anothe comment
+
 
 var maze_array: Array[Array] = [] # true is collison false is no collision
 # the width of the maze
