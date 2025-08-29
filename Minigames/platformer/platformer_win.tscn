@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_ety17"]
 radius = 68.0294
 
-[node name="platformer_win" type="Area2D"]
+[node name="PlatformerWin" type="Area2D"]
 script = ExtResource("1_pqgap")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
