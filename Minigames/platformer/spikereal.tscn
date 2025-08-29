@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Minigames/platformer/platformer.gd" id="1_l14x7"]
 [ext_resource type="Texture2D" uid="uid://deosc17d6lr88" path="res://Texture and Mesh/SPIKEFinal.png" id="1_nqguq"]
 
-[node name="spikereal" type="Area2D"]
+[node name="SpikeReal" type="Area2D"]
 collision_layer = 32
 script = ExtResource("1_l14x7")
 
