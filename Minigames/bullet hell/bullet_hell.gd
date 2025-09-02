@@ -9,7 +9,6 @@ var hardtimeout = 0
 func _ready():
 	get_tree().get_first_node_in_group("player1").global_position = $"PlayerSpawns/p1 spawn".global_position
 	get_tree().get_first_node_in_group("player2").global_position = $"PlayerSpawns/p2 spawn".global_position
-	$AudioStreamPlayer.play()
 
 func _process(_delta):
 	pass
