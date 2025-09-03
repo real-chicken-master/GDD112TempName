@@ -3,7 +3,7 @@ extends Area2D
 const speed = 250
 var player_array = [] # putting the players into an array so that they can be randomly picked to target
 var direction
-signal end_game
+signal end_game(player)
 
 @onready var p1 = get_tree().get_first_node_in_group("player1")
 @onready var p2 = get_tree().get_first_node_in_group("player2")
@@ -30,6 +30,6 @@ func _on_body_entered(body):
 			Globals.p2_Score += 1
 		if (body == p2):
 			Globals.p1_Score += 1
-		end_game.emit()
+		end_game.emit(body)
 	queue_free()
 
