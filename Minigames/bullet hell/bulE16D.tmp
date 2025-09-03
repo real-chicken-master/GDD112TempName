@@ -69,6 +69,9 @@ wait_time = 0.1
 [node name="Extreme" type="Timer" parent="."]
 wait_time = 0.01
 
+[node name="Complete" type="Timer" parent="."]
+wait_time = 3.0
+
 [node name="Label" type="Label" parent="."]
 offset_left = -216.0
 offset_top = 22.0
@@ -83,3 +86,4 @@ hit first losesand the other person gains 1 point"
 [connection signal="timeout" from="Hard" to="." method="_on_hard_timeout"]
 [connection signal="timeout" from="Extreme" to="." method="_on_extreme_timeout"]
 [connection signal="timeout" from="Extreme" to="." method="_on_hard_timeout"]
+[connection signal="timeout" from="Complete" to="." method="_on_complete_timeout"]

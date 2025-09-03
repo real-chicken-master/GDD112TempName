@@ -3,6 +3,7 @@ extends Area2D
 const speed = 250
 var player_array = [] # putting the players into an array so that they can be randomly picked to target
 var direction
+signal end_game
 
 @onready var p1 = get_tree().get_first_node_in_group("player1")
 @onready var p2 = get_tree().get_first_node_in_group("player2")
@@ -23,7 +24,8 @@ func _on_despawntimer_timeout():
 
 
 func hit():
-	Globals.change_scene(preload("res://lobby/main_lobby.tscn").instantiate())
+	$Complete.start()
+
 # when bullet hits a player, it will bring them to the main lobby
 
 # checking if its the players that made contact with the bullets and giving points to whoever didnt hit the bullet and the movement code toward the player chosen.
@@ -35,3 +37,7 @@ func _on_body_entered(body):
 			Globals.p1_Score += 1
 		hit()
 	queue_free()
+
+
+func _on_complete_timeout():
+	Globals.change_scene(preload("res://lobby/main_lobby.tscn").instantiate())
