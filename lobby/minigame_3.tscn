@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bwqor80lqgqvq"]
 
-[ext_resource type="Script" path="res://lobby/minigame_3.gd" id="1_frd4a"]
+[ext_resource type="Script" path="res://lobby/Area2D.gd" id="1_b83x4"]
 [ext_resource type="LabelSettings" uid="uid://vvbpbqq237n5" path="res://lobby/change_minigame_label.tres" id="2_p8m22"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dgx6a"]
@@ -8,11 +8,11 @@ radius = 55.0364
 
 [sub_resource type="SphereMesh" id="SphereMesh_mep34"]
 
-[node name="Minigame 3" type="Node2D"]
+[node name="Minigame3" type="Node2D"]
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 2
-script = ExtResource("1_frd4a")
+script = ExtResource("1_b83x4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_dgx6a")

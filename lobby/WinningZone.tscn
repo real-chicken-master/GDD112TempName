@@ -12,7 +12,7 @@ radius = 55.0364
 
 [sub_resource type="SphereMesh" id="SphereMesh_mep34"]
 
-[node name="Minigame 3" type="Node2D"]
+[node name="WinningZone" type="Node2D"]
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 2
