@@ -5,6 +5,9 @@ var easytimeout = 0
 var intermediatetimeout = 0
 var hardtimeout = 0
 
+@onready var p1 = get_tree().get_first_node_in_group("player1")
+@onready var p2 = get_tree().get_first_node_in_group("player2")
+
 
 func _ready():
 	get_tree().get_first_node_in_group("player1").global_position = $"PlayerSpawns/p1 spawn".global_position
@@ -34,7 +37,7 @@ func _on_hard_timeout():
 	hardtimeout += 1
 	if hardtimeout == 220:
 		$Extreme.start()
-	
+	spawn_bullet()
 	$Hard.start
 #hard mode bullet spawning
 
@@ -50,7 +53,24 @@ func spawn_bullet():
 	$projectiles.add_child(bullet)
 	bullet.connect("end_game",end_game)
 
-func end_game():
+func end_game(body):
+	for bullets in get_tree().get_nodes_in_group("bullet"):
+		bullets.queue_free()
+	if (body == p1 or body == p2):
+		if (body == p1):
+			$"P2 Wins".visible = true
+			$"P1 Wins".visible = false
+			$Easy.stop()
+			$Intermediate.stop()
+			$Hard.stop()
+			$Extreme.stop()
+		if (body == p2):
+			$"P1 Wins".visible = true
+			$"P2 Wins".visible = false
+			$Easy.stop()
+			$Intermediate.stop()
+			$Hard.stop()
+			$Extreme.stop()
 	await get_tree().create_timer(3).timeout
 	Globals.change_scene(preload("res://lobby/main_lobby.tscn").instantiate())
 
