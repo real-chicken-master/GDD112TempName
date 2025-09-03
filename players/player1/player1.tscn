@@ -1,14 +1,14 @@
 [gd_scene load_steps=6 format=3 uid="uid://nx4ggy1h8ovm"]
 
 [ext_resource type="Script" path="res://players/player1/player1.gd" id="1_b3iya"]
-[ext_resource type="Texture2D" uid="uid://nqghi77b0qk2" path="res://Texture and Mesh/player 1.png" id="2_ckkn6"]
-[ext_resource type="AudioStream" uid="uid://b3wadtgaxcwiu" path="res://AUDIO/shrtplop.wav" id="3_e4jsa"]
+[ext_resource type="Texture2D" uid="uid://b7yrvfe64lcsj" path="res://Texture and Mesh/player 1.png" id="2_ckkn6"]
+[ext_resource type="AudioStream" uid="uid://djp1calbvmpw5" path="res://AUDIO/shrtplop.wav" id="3_e4jsa"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8m3wl"]
-radius = 47.0
+radius = 47.04
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j6704"]
-radius = 47.1699
+radius = 47.04
 
 [node name="player1" type="CharacterBody2D" groups=["player", "player1"]]
 z_index = 1
@@ -20,7 +20,7 @@ position = Vector2(1, 0)
 
 [node name="PlayerSprite1" type="Sprite2D" parent="."]
 position = Vector2(2, 2.5)
-scale = Vector2(0.546763, 0.356115)
+scale = Vector2(0.546763, 0.363309)
 texture = ExtResource("2_ckkn6")
 region_rect = Rect2(71.6043, 46.466, 155.507, 258.932)
 
