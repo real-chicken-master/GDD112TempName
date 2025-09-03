@@ -54,3 +54,4 @@ func _on_extreme_timeout():
 	$projectiles.add_child(bullet)
 	$Extreme.start
 #extreme mode bullet spawning
+

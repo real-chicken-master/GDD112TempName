@@ -21,9 +21,5 @@ shape = SubResource("CircleShape2D_rjksl")
 wait_time = 9.0
 autostart = true
 
-[node name="Complete" type="Timer" parent="."]
-wait_time = 3.0
-
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="despawntimer" to="." method="_on_despawntimer_timeout"]
-[connection signal="timeout" from="Complete" to="." method="_on_complete_timeout"]
