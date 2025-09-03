@@ -18,10 +18,7 @@ func _on_easy_timeout():
 	easytimeout += 1
 	if easytimeout == 20:
 		$Intermediate.start()
-	var spawnpos = $"Bullet Spawns".get_child(randi()%$"Bullet Spawns".get_child_count()).global_position
-	var bullet = bullets.instantiate()
-	bullet.global_position = spawnpos
-	$projectiles.add_child(bullet)
+	spawn_bullet()
 	$Easy.start
 #easy mode bullet spawning
 
@@ -29,10 +26,7 @@ func _on_intermediate_timeout():
 	intermediatetimeout += 1
 	if intermediatetimeout == 100:
 		$Hard.start()
-	var spawnpos = $"Bullet Spawns".get_child(randi()%$"Bullet Spawns".get_child_count()).global_position
-	var bullet = bullets.instantiate()
-	bullet.global_position = spawnpos
-	$projectiles.add_child(bullet)
+	spawn_bullet()
 	$Intermediate.start
 #intermediate mode bullet spawning
 
@@ -40,18 +34,23 @@ func _on_hard_timeout():
 	hardtimeout += 1
 	if hardtimeout == 220:
 		$Extreme.start()
-	var spawnpos = $"Bullet Spawns".get_child(randi()%$"Bullet Spawns".get_child_count()).global_position
-	var bullet = bullets.instantiate()
-	bullet.global_position = spawnpos
-	$projectiles.add_child(bullet)
+	
 	$Hard.start
 #hard mode bullet spawning
 
 func _on_extreme_timeout():
+	spawn_bullet()
+	$Extreme.start
+#extreme mode bullet spawning
+
+func spawn_bullet():
 	var spawnpos = $"Bullet Spawns".get_child(randi()%$"Bullet Spawns".get_child_count()).global_position
 	var bullet = bullets.instantiate()
 	bullet.global_position = spawnpos
 	$projectiles.add_child(bullet)
-	$Extreme.start
-#extreme mode bullet spawning
+	bullet.connect("end_game",end_game)
+
+func end_game():
+	await get_tree().create_timer(3).timeout
+	Globals.change_scene(preload("res://lobby/main_lobby.tscn").instantiate())
 
