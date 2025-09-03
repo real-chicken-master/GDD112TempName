@@ -22,12 +22,7 @@ func _process(delta):
 func _on_despawntimer_timeout():
 	queue_free()
 
-
-func hit():
-	$Complete.start()
-
 # when bullet hits a player, it will bring them to the main lobby
-
 # checking if its the players that made contact with the bullets and giving points to whoever didnt hit the bullet and the movement code toward the player chosen.
 func _on_body_entered(body):
 	if (body == p1 or body == p2):
@@ -35,9 +30,6 @@ func _on_body_entered(body):
 			Globals.p2_Score += 1
 		if (body == p2):
 			Globals.p1_Score += 1
-		hit()
+		end_game.emit()
 	queue_free()
 
-
-func _on_complete_timeout():
-	Globals.change_scene(preload("res://lobby/main_lobby.tscn").instantiate())
