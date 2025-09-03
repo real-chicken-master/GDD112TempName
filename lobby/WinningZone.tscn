@@ -1,0 +1,74 @@
+[gd_scene load_steps=9 format=3 uid="uid://cyb70a5lpd3d"]
+
+[ext_resource type="Script" path="res://lobby/minigame_3.gd" id="1_iorqg"]
+[ext_resource type="LabelSettings" uid="uid://vvbpbqq237n5" path="res://lobby/change_minigame_label.tres" id="2_bgxjo"]
+[ext_resource type="Texture2D" uid="uid://wsjetrqt2hlj" path="res://Texture and Mesh/matured meat pie art.png" id="3_ygwas"]
+[ext_resource type="Texture2D" uid="uid://coelr54fhx1ur" path="res://Texture and Mesh/Concept/concept art shindrr bockorc.png" id="4_xogk4"]
+[ext_resource type="Texture2D" uid="uid://ffntrqx4fxcm" path="res://Texture and Mesh/Concept/concept art paper trophy .png" id="5_gv0oq"]
+[ext_resource type="Texture2D" uid="uid://d2rjn7pv01i8" path="res://Texture and Mesh/Concept/concept art socke.png" id="6_6o1a0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dgx6a"]
+radius = 55.0364
+
+[sub_resource type="SphereMesh" id="SphereMesh_mep34"]
+
+[node name="Minigame 3" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+script = ExtResource("1_iorqg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_dgx6a")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(1.49012e-06, 1.0252e-05)
+scale = Vector2(110.125, 110)
+mesh = SubResource("SphereMesh_mep34")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -46.0
+offset_top = -45.0
+offset_right = 47.0
+offset_bottom = 44.0
+text = "End point
+"
+label_settings = ExtResource("2_bgxjo")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MeatPie" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(12, -127)
+texture = ExtResource("3_ygwas")
+
+[node name="CinderBlock" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(15, -5)
+texture = ExtResource("4_xogk4")
+
+[node name="PaperTrophy" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(4, 3)
+texture = ExtResource("5_gv0oq")
+
+[node name="Sock" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-11, -3)
+texture = ExtResource("6_6o1a0")
+
+[node name="P1FullWin" type="Label" parent="."]
+visible = false
+offset_left = -103.0
+offset_top = 57.0
+offset_right = 101.0
+offset_bottom = 80.0
+text = "PLAYER ONE WINS YIPPPIE"
+
+[node name="P2FullWin" type="Label" parent="."]
+visible = false
+offset_left = -101.0
+offset_top = 52.0
+offset_right = 96.0
+offset_bottom = 150.0
+text = "PLAYER TWO WINS YIPPIE"
