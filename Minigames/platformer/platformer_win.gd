@@ -16,7 +16,6 @@ func _on_body_entered(body):
 	if player_1_finished and player_2_finished:
 		if gameover == false :
 			gameover = true
-			print("test")
 			if Globals.player_1_hit > Globals.player_2_hit: label.text = "p2 win!"
 			if Globals.player_1_hit > Globals.player_2_hit:Globals.p2_Score += 1
 			if Globals.player_2_hit > Globals.player_1_hit: label.text = "p1 win!"
