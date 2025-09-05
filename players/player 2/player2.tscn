@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://djvanbdp8c7no"]
 
 [ext_resource type="Script" path="res://players/player 2/player2.gd" id="1_q82fh"]
-[ext_resource type="Texture2D" uid="uid://dow75omibjv2q" path="res://Texture and Mesh/player 2.png" id="2_8sobn"]
-[ext_resource type="AudioStream" uid="uid://b3wadtgaxcwiu" path="res://AUDIO/shrtplop.wav" id="3_td28j"]
+[ext_resource type="Texture2D" uid="uid://cwfidw4o7tr1o" path="res://Texture and Mesh/player 2.png" id="2_8sobn"]
+[ext_resource type="AudioStream" uid="uid://djp1calbvmpw5" path="res://AUDIO/shrtplop.wav" id="3_td28j"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2kqkd"]
 radius = 47.04

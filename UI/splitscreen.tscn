@@ -52,12 +52,13 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="HBoxContainer/SubViewportContainer"]
 handle_input_locally = false
-size = Vector2i(2, 2)
+size = Vector2i(3, 10)
 render_target_update_mode = 4
 script = SubResource("GDScript_3ulip")
 
 [node name="Camera2D" type="Camera2D" parent="HBoxContainer/SubViewportContainer/SubViewport" groups=["camera"]]
 position_smoothing_enabled = true
+position_smoothing_speed = 3.0
 
 [node name="player1" parent="HBoxContainer/SubViewportContainer/SubViewport" instance=ExtResource("1_slcjd")]
 z_index = 2
@@ -76,12 +77,13 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="HBoxContainer/SubViewportContainer2"]
 handle_input_locally = false
-size = Vector2i(2, 2)
+size = Vector2i(3, 10)
 render_target_update_mode = 4
 script = SubResource("GDScript_eexgl")
 
 [node name="Camera2D" type="Camera2D" parent="HBoxContainer/SubViewportContainer2/SubViewport" groups=["camera"]]
 position_smoothing_enabled = true
+position_smoothing_speed = 3.0
 
 [node name="player2" parent="HBoxContainer/SubViewportContainer2/SubViewport" instance=ExtResource("2_5bn30")]
 position = Vector2(300, 50)
