@@ -1,5 +1,7 @@
 extends Node
 
+var end_triggered = false
+
 var p1_Score = 0:
 	set(temp):
 		p1_Score = temp
