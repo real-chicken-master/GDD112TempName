@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://caehaixig1qq1"]
+[gd_scene load_steps=7 format=3 uid="uid://caehaixig1qq1"]
 
 [ext_resource type="Script" path="res://Minigames/bullet hell/bullet_hell.gd" id="1_4bkeb"]
-[ext_resource type="Texture2D" uid="uid://bp2tdhuvclseq" path="res://Texture and Mesh/background art.png" id="2_b8qly"]
-[ext_resource type="Texture2D" uid="uid://bpbowbn23detd" path="res://Texture and Mesh/ArcadeWall.png" id="2_vyarn"]
+[ext_resource type="Texture2D" uid="uid://c0e1pwo8pjrx3" path="res://Texture and Mesh/background art.png" id="2_b8qly"]
+[ext_resource type="Texture2D" uid="uid://b3l2q2kpgy2t" path="res://Texture and Mesh/ArcadeWall.png" id="2_vyarn"]
+[ext_resource type="AudioStream" uid="uid://b4cbhq5ttartp" path="res://AUDIO/90's Industrial Metal Cyberpunk - Broken  Royalty Free No Copyright Music.mp3" id="4_5r83j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1osdu"]
 texture = ExtResource("2_vyarn")
@@ -98,8 +99,13 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 151
 text = "Player 2 Has Won!"
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_5r83j")
+autoplay = true
+mix_target = 1
+
 [connection signal="timeout" from="Easy" to="." method="_on_easy_timeout"]
 [connection signal="timeout" from="Intermediate" to="." method="_on_intermediate_timeout"]
 [connection signal="timeout" from="Hard" to="." method="_on_hard_timeout"]
-[connection signal="timeout" from="Extreme" to="." method="_on_extreme_timeout"]
 [connection signal="timeout" from="Extreme" to="." method="_on_hard_timeout"]
+[connection signal="timeout" from="Extreme" to="." method="_on_extreme_timeout"]
