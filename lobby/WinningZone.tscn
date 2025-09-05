@@ -39,22 +39,26 @@ vertical_alignment = 1
 
 [node name="MeatPie" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(12, -127)
+position = Vector2(4.00003, 1)
+scale = Vector2(1.86, 2.16)
 texture = ExtResource("3_ygwas")
 
 [node name="CinderBlock" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(15, -5)
+position = Vector2(1, 5.00006)
+scale = Vector2(2.025, 2.03333)
 texture = ExtResource("4_xogk4")
 
 [node name="PaperTrophy" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(4, 3)
+position = Vector2(6.10352e-05, 1.00003)
+scale = Vector2(1.92, 1.92667)
 texture = ExtResource("5_gv0oq")
 
 [node name="Sock" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(-11, -3)
+position = Vector2(0.999939, -3)
+scale = Vector2(1.67, 1.86667)
 texture = ExtResource("6_6o1a0")
 
 [node name="P1FullWin" type="Label" parent="."]
@@ -63,7 +67,8 @@ offset_left = -103.0
 offset_top = 57.0
 offset_right = 101.0
 offset_bottom = 80.0
-text = "PLAYER ONE WINS YIPPPIE"
+theme_override_colors/font_color = Color(0.976471, 0, 0, 1)
+text = "PLAYER ONE WINS YIPPPIE HERE IS A PRIZE"
 
 [node name="P2FullWin" type="Label" parent="."]
 visible = false
@@ -71,6 +76,7 @@ offset_left = -101.0
 offset_top = 52.0
 offset_right = 96.0
 offset_bottom = 150.0
-text = "PLAYER TWO WINS YIPPIE"
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "PLAYER TWO WINS YIPPIE HERE IS A PRIZE"
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
