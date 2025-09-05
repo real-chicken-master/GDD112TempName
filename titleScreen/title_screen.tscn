@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://8g6juadolp72"]
 
 [ext_resource type="Script" path="res://titleScreen/title_screen.gd" id="1_gy53o"]
-[ext_resource type="Texture2D" uid="uid://bona8dnua84ve" path="res://Texture and Mesh/background art.png" id="2_5a40x"]
-[ext_resource type="Texture2D" uid="uid://btbwvc4n4svdq" path="res://Texture and Mesh/ArcadeWall.png" id="3_g4v5g"]
+[ext_resource type="Texture2D" uid="uid://c0e1pwo8pjrx3" path="res://Texture and Mesh/background art.png" id="2_5a40x"]
+[ext_resource type="Texture2D" uid="uid://b3l2q2kpgy2t" path="res://Texture and Mesh/ArcadeWall.png" id="3_g4v5g"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_dgf6p"]
 font_size = 70
@@ -40,9 +40,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -103.0
-offset_top = 179.0
+offset_top = 154.0
 offset_right = 93.0
-offset_bottom = 287.0
+offset_bottom = 242.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -66,7 +66,7 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -1214.5
-offset_top = -485.0
+offset_top = -190.0
 offset_right = 1214.5
 offset_bottom = 171.0
 grow_horizontal = 2
