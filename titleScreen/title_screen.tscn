@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://8g6juadolp72"]
 
 [ext_resource type="Script" path="res://titleScreen/title_screen.gd" id="1_gy53o"]
-[ext_resource type="Texture2D" uid="uid://c0e1pwo8pjrx3" path="res://Texture and Mesh/background art.png" id="2_5a40x"]
-[ext_resource type="Texture2D" uid="uid://b3l2q2kpgy2t" path="res://Texture and Mesh/ArcadeWall.png" id="3_g4v5g"]
+[ext_resource type="Texture2D" uid="uid://bona8dnua84ve" path="res://Texture and Mesh/background art.png" id="2_5a40x"]
+[ext_resource type="Texture2D" uid="uid://btbwvc4n4svdq" path="res://Texture and Mesh/ArcadeWall.png" id="3_g4v5g"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_dgf6p"]
 font_size = 70
@@ -34,15 +34,15 @@ region_rect = Rect2(-2261.21, -3862.84, 10740, 7576.98)
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -103.0
-offset_top = -61.0
+offset_top = 179.0
 offset_right = 93.0
-offset_bottom = 57.0
+offset_bottom = 287.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -57,5 +57,24 @@ text = "start"
 label_settings = SubResource("LabelSettings_dgf6p")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1214.5
+offset_top = -485.0
+offset_right = 1214.5
+offset_bottom = 171.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 160
+text = "BRAIN GESTICULATE"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
