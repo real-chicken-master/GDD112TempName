@@ -7,11 +7,12 @@ var hardtimeout = 0
 
 @onready var p1 = get_tree().get_first_node_in_group("player1")
 @onready var p2 = get_tree().get_first_node_in_group("player2")
-
+# getting the variables p1 and p2
 
 func _ready():
 	get_tree().get_first_node_in_group("player1").global_position = $"PlayerSpawns/p1 spawn".global_position
 	get_tree().get_first_node_in_group("player2").global_position = $"PlayerSpawns/p2 spawn".global_position
+	# setting spawns
 
 func _process(_delta):
 	pass
@@ -52,7 +53,7 @@ func spawn_bullet():
 	bullet.global_position = spawnpos
 	$projectiles.add_child(bullet)
 	bullet.connect("end_game",end_game)
-
+# spawning bullets and sending signal to end the game
 func end_game(body):
 	for bullets in get_tree().get_nodes_in_group("bullet"):
 		bullets.queue_free()
@@ -73,4 +74,5 @@ func end_game(body):
 			$Extreme.stop()
 	await get_tree().create_timer(3).timeout
 	Globals.change_scene(preload("res://lobby/main_lobby.tscn").instantiate())
+	# registers who wins, stops bullets from spawning and removes all bullets at once. displays who one in the middle of the screen
 
