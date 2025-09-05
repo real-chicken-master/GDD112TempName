@@ -1,7 +1,7 @@
 extends Control
 
-var rotate =  randf_range(-1,1)
-var button_Rotate = randf_range(-1,1)
+var rotate =  randf_range(1,2)
+var button_Rotate = randf_range(1,3)
 func _process(_delta):
 	$BackgroundArt.rotation_degrees += rotate
 	$ArcadeWall.rotation_degrees -= rotate
