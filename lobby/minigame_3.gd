@@ -2,8 +2,8 @@ extends Area2D
 
 
 
-func _process(_delta):
-	for body in get_overlapping_bodies():
+
+func _on_body_entered(body):
 		if (body.name == "player1" || "player2"):
 			var prize_number = randi_range(1,4)
 			match prize_number:
@@ -20,5 +20,3 @@ func _process(_delta):
 				$"../P1FullWin".visible = true
 			if Globals.p1_Score < Globals.p2_Score:
 				$"../P2FullWin".visible = true
-
-

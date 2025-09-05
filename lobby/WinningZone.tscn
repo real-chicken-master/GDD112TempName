@@ -72,3 +72,5 @@ offset_top = 52.0
 offset_right = 96.0
 offset_bottom = 150.0
 text = "PLAYER TWO WINS YIPPIE"
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
