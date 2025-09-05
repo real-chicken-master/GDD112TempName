@@ -4,7 +4,7 @@ extends Area2D
 var player_win
 
 func _on_body_entered(body):
-	if Globals.end_triggered:
+	if !Globals.end_triggered:
 		Globals.end_triggered = true
 		if Globals.p1_Score > Globals.p2_Score:
 			player_win = player_1
