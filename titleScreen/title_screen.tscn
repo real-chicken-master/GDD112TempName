@@ -18,6 +18,7 @@ script = ExtResource("1_gy53o")
 
 [node name="BackgroundArt" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.458824)
+z_index = -1
 texture_repeat = 2
 position = Vector2(1, 28)
 texture = ExtResource("2_5a40x")
@@ -26,6 +27,7 @@ region_rect = Rect2(-2261.21, -3862.84, 10740, 7576.98)
 
 [node name="ArcadeWall" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.447059)
+z_index = -1
 texture_repeat = 2
 position = Vector2(1, 36)
 texture = ExtResource("3_g4v5g")
