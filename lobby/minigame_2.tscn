@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://lobby/minigame_2.gd" id="1_20new"]
 [ext_resource type="LabelSettings" uid="uid://vvbpbqq237n5" path="res://lobby/change_minigame_label.tres" id="2_ldnrq"]
-[ext_resource type="Texture2D" uid="uid://ds56fwbcd0m7e" path="res://Texture and Mesh/concept art arcade (1).png" id="2_nl8i5"]
+[ext_resource type="Texture2D" uid="uid://dvn3isr2jgvof" path="res://Texture and Mesh/concept art arcade (1).png" id="2_nl8i5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mgy7x"]
 radius = 55.0364

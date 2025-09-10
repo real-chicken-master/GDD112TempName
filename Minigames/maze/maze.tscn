@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://b4my264vw45n"]
+[gd_scene load_steps=12 format=3 uid="uid://b4my264vw45n"]
 
 [ext_resource type="Script" path="res://Minigames/maze/maze.gd" id="1_d5sv8"]
 [ext_resource type="Texture2D" uid="uid://yrxqe4kb6ffh" path="res://Texture and Mesh/maze/wall.png" id="2_cjl1d"]
 [ext_resource type="Texture2D" uid="uid://byfrir71lftfg" path="res://Texture and Mesh/maze/finish.png" id="3_qomrb"]
 [ext_resource type="Texture2D" uid="uid://dqotqj7ifm7nv" path="res://Texture and Mesh/maze/path.png" id="4_tyqt1"]
 [ext_resource type="AudioStream" uid="uid://duxk5w1aeggau" path="res://AUDIO/mazeMusic.mp3" id="5_tbeq8"]
+[ext_resource type="Texture2D" uid="uid://22pt833uembe" path="res://Texture and Mesh/maze.sign-removebg-preview.png" id="6_gdvs6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vrrjp"]
 resource_name = "wall"
@@ -70,6 +71,11 @@ position = Vector2(360, 436)
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_tbeq8")
 autoplay = true
+
+[node name="Maze_sign-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(378, 325)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("6_gdvs6")
 
 [connection signal="tree_exiting" from="." to="." method="_on_tree_exiting"]
 [connection signal="body_entered" from="FinishArea" to="." method="_on_finish_area_body_entered"]
