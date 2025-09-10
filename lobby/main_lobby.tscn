@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dxtgtd1cq23fw"]
+[gd_scene load_steps=12 format=3 uid="uid://dxtgtd1cq23fw"]
 
 [ext_resource type="Texture2D" uid="uid://neigjw7fl147" path="res://Texture and Mesh/Concept/concept aet foall.png" id="1_dwxfc"]
 [ext_resource type="Script" path="res://lobby/main_lobby.gd" id="1_vtgsn"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://bwqor80lqgqvq" path="res://lobby/minigame_3.tscn" id="3_ufeh7"]
 [ext_resource type="Texture2D" uid="uid://d3kie7yi2ut5b" path="res://Texture and Mesh/ArcadeWall.png" id="5_th5fa"]
 [ext_resource type="PackedScene" uid="uid://cyb70a5lpd3d" path="res://lobby/WinningZone.tscn" id="7_7qsog"]
+[ext_resource type="Texture2D" uid="uid://b7oy0yr64hox8" path="res://Texture and Mesh/main.turtoial-removebg-preview.png" id="8_1v5qf"]
+[ext_resource type="Texture2D" uid="uid://yfy1lqayixhw" path="res://Texture and Mesh/contorrles-removebg-preview.png" id="9_dfox7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vdirs"]
 texture = ExtResource("5_th5fa")
@@ -52,3 +54,13 @@ layer_0/tile_data = PackedInt32Array(-196612, 0, 0, -131076, 0, 0, -65540, 0, 0,
 
 [node name="WinningZone" parent="." instance=ExtResource("7_7qsog")]
 position = Vector2(1168, 548)
+
+[node name="Main_turtoial-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(797, 82)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("8_1v5qf")
+
+[node name="Contorrles-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(334, 79)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("9_dfox7")
