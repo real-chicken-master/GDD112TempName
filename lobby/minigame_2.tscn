@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bvxji66hx528i"]
+[gd_scene load_steps=6 format=3 uid="uid://bvxji66hx528i"]
 
 [ext_resource type="Script" path="res://lobby/minigame_2.gd" id="1_20new"]
 [ext_resource type="LabelSettings" uid="uid://vvbpbqq237n5" path="res://lobby/change_minigame_label.tres" id="2_ldnrq"]
+[ext_resource type="Texture2D" uid="uid://ds56fwbcd0m7e" path="res://Texture and Mesh/concept art arcade (1).png" id="2_nl8i5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mgy7x"]
 radius = 55.0364
@@ -17,7 +18,13 @@ script = ExtResource("1_20new")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_mgy7x")
 
+[node name="ConceptArtArcade(1)" type="Sprite2D" parent="Area2D"]
+position = Vector2(26, 4)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_nl8i5")
+
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+visible = false
 position = Vector2(1.49012e-06, 1.0252e-05)
 scale = Vector2(110.125, 110)
 mesh = SubResource("SphereMesh_f7jqe")

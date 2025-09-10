@@ -35,6 +35,11 @@ tile_set = SubResource("TileSet_m5qtq")
 format = 2
 layer_0/tile_data = PackedInt32Array(131069, 0, 0, 65533, 0, 0, -3, 0, 0, -65539, 0, 0, -65538, 0, 0, -65537, 0, 0, -131072, 0, 0, -131071, 0, 0, -131070, 0, 0, -65534, 0, 0, 2, 0, 0, 65538, 0, 0, 65537, 0, 0, 65536, 0, 0, 131071, 0, 0, 131070, 0, 0)
 
+[node name="BulletHellSign" type="Sprite2D" parent="."]
+position = Vector2(22, 1.00001)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("5_ydddu")
+
 [node name="projectiles" type="Node2D" parent="."]
 
 [node name="PlayerSpawns" type="Node2D" parent="."]
@@ -105,11 +110,6 @@ text = "Player 2 Has Won!"
 stream = ExtResource("4_5r83j")
 autoplay = true
 mix_target = 1
-
-[node name="BulletHellSign" type="Sprite2D" parent="."]
-position = Vector2(22, 1.00001)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("5_ydddu")
 
 [connection signal="timeout" from="Easy" to="." method="_on_easy_timeout"]
 [connection signal="timeout" from="Intermediate" to="." method="_on_intermediate_timeout"]
