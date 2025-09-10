@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dxtgtd1cq23fw"]
+[gd_scene load_steps=13 format=3 uid="uid://dxtgtd1cq23fw"]
 
 [ext_resource type="Texture2D" uid="uid://neigjw7fl147" path="res://Texture and Mesh/Concept/concept aet foall.png" id="1_dwxfc"]
 [ext_resource type="Script" path="res://lobby/main_lobby.gd" id="1_vtgsn"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cyb70a5lpd3d" path="res://lobby/WinningZone.tscn" id="7_7qsog"]
 [ext_resource type="Texture2D" uid="uid://b7oy0yr64hox8" path="res://Texture and Mesh/main.turtoial-removebg-preview.png" id="8_1v5qf"]
 [ext_resource type="Texture2D" uid="uid://yfy1lqayixhw" path="res://Texture and Mesh/contorrles-removebg-preview.png" id="9_dfox7"]
+[ext_resource type="Texture2D" uid="uid://dguqxux7ebbq5" path="res://Texture and Mesh/temp-removebg-preview.png" id="10_vus2v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vdirs"]
 texture = ExtResource("5_th5fa")
@@ -53,7 +54,7 @@ format = 2
 layer_0/tile_data = PackedInt32Array(-196612, 0, 0, -131076, 0, 0, -65540, 0, 0, -4, 0, 0, 65532, 0, 0, 131068, 0, 0, 196604, 0, 0, 262140, 0, 0, 327676, 0, 0, 393212, 0, 0, 393213, 0, 0, 393214, 0, 0, 393215, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 262149, 0, 0, 196613, 0, 0, 131077, 0, 0, 65541, 0, 0, 5, 0, 0, -65531, 0, 0, -131067, 0, 0, -196603, 0, 0, -262139, 0, 0, -262140, 0, 0, -262141, 0, 0, -262142, 0, 0, -262143, 0, 0, -262144, 0, 0, -196609, 0, 0, -196610, 0, 0, -196611, 0, 0, -262149, 0, 0, -196613, 0, 0, -131077, 0, 0, -65541, 0, 0, -5, 0, 0, 65531, 0, 0, 131067, 0, 0, 196603, 0, 0, 262139, 0, 0, 327675, 0, 0, 393211, 0, 0, 458747, 0, 0, -262148, 0, 0, 458748, 0, 0, 458749, 0, 0, 458750, 0, 0, 458751, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, -327674, 0, 0, -262138, 0, 0, -196602, 0, 0, -131066, 0, 0, -65530, 0, 0, 6, 0, 0, 65542, 0, 0, 131078, 0, 0, 196614, 0, 0, 262150, 0, 0, 327686, 0, 0, -262147, 0, 0, -262146, 0, 0, -262145, 0, 0, -327680, 0, 0, -327679, 0, 0, -327678, 0, 0, -327677, 0, 0, -327676, 0, 0, -327675, 0, 0)
 
 [node name="WinningZone" parent="." instance=ExtResource("7_7qsog")]
-position = Vector2(1168, 548)
+position = Vector2(1280, 596)
 
 [node name="Main_turtoial-removebg-preview" type="Sprite2D" parent="."]
 position = Vector2(797, 82)
@@ -64,3 +65,8 @@ texture = ExtResource("8_1v5qf")
 position = Vector2(334, 79)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("9_dfox7")
+
+[node name="Temp-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(1291, 442)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("10_vus2v")
