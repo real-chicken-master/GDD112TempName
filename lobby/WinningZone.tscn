@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://lobby/minigame_3.gd" id="1_iorqg"]
 [ext_resource type="LabelSettings" uid="uid://vvbpbqq237n5" path="res://lobby/change_minigame_label.tres" id="2_bgxjo"]
-[ext_resource type="Texture2D" uid="uid://wsjetrqt2hlj" path="res://Texture and Mesh/matured meat pie art.png" id="3_ygwas"]
+[ext_resource type="Texture2D" uid="uid://bl6gvixkra6jp" path="res://Texture and Mesh/matured meat pie art.png" id="3_ygwas"]
 [ext_resource type="Texture2D" uid="uid://coelr54fhx1ur" path="res://Texture and Mesh/Concept/concept art shindrr bockorc.png" id="4_xogk4"]
-[ext_resource type="Texture2D" uid="uid://ffntrqx4fxcm" path="res://Texture and Mesh/Concept/concept art paper trophy .png" id="5_gv0oq"]
-[ext_resource type="Texture2D" uid="uid://d2rjn7pv01i8" path="res://Texture and Mesh/Concept/concept art socke.png" id="6_6o1a0"]
+[ext_resource type="Texture2D" uid="uid://blptseyijeyfv" path="res://Texture and Mesh/Concept/concept art paper trophy .png" id="5_gv0oq"]
+[ext_resource type="Texture2D" uid="uid://cao1otpa1rkvy" path="res://Texture and Mesh/Concept/concept art socke.png" id="6_6o1a0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dgx6a"]
 radius = 55.0364

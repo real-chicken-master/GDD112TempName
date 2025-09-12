@@ -246,10 +246,12 @@ func _on_finish_area_body_entered(body):
 	if body == get_tree().get_first_node_in_group("player1"):
 		#increase player ones global score
 		Globals.p1_Score += 1
+		Globals.end_triggered = false
 	#if the body is p2
 	if body == get_tree().get_first_node_in_group("player2"):
 		#increase player twos global score
 		Globals.p2_Score += 1
+		Globals.end_triggered = false
 	#change the scene to the main loby
 	Globals.change_scene(preload("res://lobby/main_lobby.tscn").instantiate())
 #this is a comment to show the end of the script

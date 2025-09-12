@@ -65,6 +65,7 @@ func end_game(body):
 			$Intermediate.stop()
 			$Hard.stop()
 			$Extreme.stop()
+			Globals.end_triggered = false
 		if (body == p2):
 			$"P1 Wins".visible = true
 			$"P2 Wins".visible = false
@@ -72,6 +73,7 @@ func end_game(body):
 			$Intermediate.stop()
 			$Hard.stop()
 			$Extreme.stop()
+			Globals.end_triggered = false
 	await get_tree().create_timer(3).timeout
 	Globals.change_scene(preload("res://lobby/main_lobby.tscn").instantiate())
 	# registers who wins, stops bullets from spawning and removes all bullets at once. displays who one in the middle of the screen
